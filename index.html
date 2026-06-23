@@ -17,11 +17,9 @@
   p.sub { font-size: 14px; color: #666; margin-bottom: 20px; }
 
   .card { background: #fff; border-radius: 14px; border: 1px solid #e5e5e5; padding: 18px; margin-bottom: 14px; }
-
   .stu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .stu-btn { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 10px 6px; text-align: center; cursor: pointer; font-size: 14px; font-weight: 600; transition: border-color .15s, background .15s; }
   .stu-btn:hover { border-color: #4285f4; background: #f0f6ff; }
-  .stu-btn .stu-info { font-size: 11px; font-weight: 400; color: #888; margin-top: 2px; }
 
   select, input[type=number] { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid #ddd; font-size: 15px; background: #fff; color: #1a1a1a; font-family: inherit; margin-bottom: 2px; }
   select:focus, input:focus { outline: none; border-color: #4285f4; box-shadow: 0 0 0 3px rgba(66,133,244,.15); }
@@ -45,31 +43,33 @@
 
   .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
   .prog-text { font-size: 13px; color: #666; }
-
   .prog-bar { background: #e8eaed; border-radius: 99px; height: 6px; margin-bottom: 16px; overflow: hidden; }
   .prog-fill { height: 100%; background: #4285f4; border-radius: 99px; transition: width .3s; }
 
-  .q-card { background: #fff; border-radius: 16px; border: 1px solid #e5e5e5; padding: 28px 20px; text-align: center; margin-bottom: 16px; }
-  .q-type { font-size: 12px; color: #888; margin-bottom: 10px; }
-  .q-text { font-size: 28px; font-weight: 700; letter-spacing: 1px; color: #1a1a1a; margin-bottom: 8px; line-height: 1.4; }
-  .q-hint { font-size: 13px; color: #888; }
+  /* 퀴즈 카드 */
+  .q-card { background: #fff; border-radius: 16px; border: 1px solid #e5e5e5; padding: 24px 20px; text-align: center; margin-bottom: 16px; min-height: 140px; display: flex; flex-direction: column; justify-content: center; }
+  .q-type { font-size: 11px; color: #888; margin-bottom: 10px; background: #f5f5f5; display: inline-block; padding: 3px 10px; border-radius: 20px; }
+  .q-story { font-size: 14px; color: #444; line-height: 1.7; margin-bottom: 14px; text-align: left; background: #f8f9fa; border-radius: 10px; padding: 12px 14px; }
+  .q-story strong { color: #34a853; }
+  .q-ask { font-size: 15px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
 
   /* 분수 표현 */
-  .frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 22px; font-weight: 700; line-height: 1.1; margin: 0 3px; }
-  .frac .fn { border-bottom: 2px solid #1a1a1a; padding-bottom: 1px; min-width: 22px; text-align: center; }
-  .frac .fd { padding-top: 1px; min-width: 22px; text-align: center; }
-  .mixed-frac { display: inline-flex; align-items: center; gap: 3px; vertical-align: middle; }
+  .frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; font-size: 22px; font-weight: 700; line-height: 1.1; margin: 0 2px; }
+  .frac .fn { border-bottom: 2.5px solid #1a1a1a; padding-bottom: 1px; min-width: 20px; text-align: center; }
+  .frac .fd { padding-top: 1px; min-width: 20px; text-align: center; }
+  .mixed-frac { display: inline-flex; align-items: center; gap: 2px; vertical-align: middle; }
   .mixed-frac .whole { font-size: 26px; font-weight: 700; }
-  .op-text { font-size: 28px; font-weight: 700; vertical-align: middle; margin: 0 6px; }
+  .op-text { font-size: 26px; font-weight: 700; vertical-align: middle; margin: 0 4px; }
+  .q-expr { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px; font-size: 26px; font-weight: 700; }
 
   /* 답 입력 */
   .ans-area { margin-bottom: 10px; }
-  .ans-frac-wrap { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .ans-wrap { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .ans-frac-box { display: inline-flex; flex-direction: column; align-items: center; gap: 3px; }
-  .ans-frac-box input { width: 64px; font-size: 20px; text-align: center; font-weight: 700; padding: 8px 4px; margin: 0; }
-  .ans-frac-line { width: 64px; height: 2px; background: #1a1a1a; border-radius: 2px; }
-  .ans-whole input { width: 64px; font-size: 20px; text-align: center; font-weight: 700; padding: 8px 4px; margin: 0; }
-  .ans-label { font-size: 12px; color: #888; text-align: center; margin-top: 2px; }
+  .ans-frac-box input { width: 60px; font-size: 18px; text-align: center; font-weight: 700; padding: 7px 4px; margin: 0; }
+  .ans-frac-line { width: 60px; height: 2.5px; background: #1a1a1a; border-radius: 2px; }
+  .ans-whole-box input { width: 60px; font-size: 18px; text-align: center; font-weight: 700; padding: 7px 4px; margin: 0; }
+  .ans-label { font-size: 11px; color: #888; text-align: center; margin-top: 2px; }
 
   .feedback { border-radius: 12px; padding: 12px 16px; font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
   .feedback.ok { background: #e6f4ea; color: #137333; border: 1px solid #ceead6; }
@@ -96,15 +96,14 @@
   .metric-val { font-size: 24px; font-weight: 700; }
 
   .wrong-item { border: 1px solid #e5e5e5; border-radius: 10px; padding: 12px 14px; margin-bottom: 8px; background: #fff; }
-  .wrong-q { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-  .wrong-ans { font-size: 13px; color: #c5221f; margin-bottom: 4px; }
+  .wrong-q { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .wrong-ans { font-size: 13px; color: #c5221f; margin-bottom: 3px; }
   .wrong-correct { font-size: 13px; color: #137333; margin-bottom: 6px; }
-  .wrong-analysis-tag { font-size: 12px; padding: 3px 10px; border-radius: 20px; background: #fef7e0; color: #b06000; font-weight: 600; display: inline-block; }
+  .wrong-tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #fef7e0; color: #b06000; font-weight: 600; display: inline-block; }
 
-  /* 단원 선택 카드 */
+  /* 단원 선택 */
   .unit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
   .unit-card { background: #fff; border: 2px solid #e0e0e0; border-radius: 14px; padding: 18px 14px; text-align: center; cursor: pointer; transition: border-color .15s, background .15s; }
-  .unit-card:hover { border-color: #4285f4; background: #f0f6ff; }
   .unit-card.u3 { border-color: #fbbc04; }
   .unit-card.u3:hover { background: #fffde7; }
   .unit-card.u5 { border-color: #34a853; }
@@ -123,23 +122,19 @@
   .lesson-item .l-sub { font-size: 11px; color: #888; margin-top: 2px; }
   .lesson-item .l-badge { font-size: 10px; padding: 2px 7px; border-radius: 10px; background: #e6f4ea; color: #34a853; font-weight: 700; display: inline-block; margin-top: 4px; }
 
-  /* 난이도 선택 */
-  .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .count-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-  .diff-btn { background: #fff; border: 2px solid #e0e0e0; border-radius: 10px; padding: 12px 6px; text-align: center; cursor: pointer; font-size: 14px; font-weight: 700; transition: all .15s; font-family: inherit; }
-  .diff-btn.easy { border-color: #e0e0e0; }
-  .diff-btn.easy.active { border-color: #34a853; background: #e6f4ea; color: #137333; }
-  .diff-btn.normal { border-color: #e0e0e0; }
-  .diff-btn.normal.active { border-color: #4285f4; background: #e8f0fe; color: #1a73e8; }
-  .diff-btn.hard { border-color: #e0e0e0; }
-  .diff-btn.hard.active { border-color: #ea4335; background: #fce8e6; color: #c5221f; }
-  .count-choice.active { border-color: #4285f4; background: #e8f0fe; color: #1a73e8; }
-  .diff-btn .d-emoji { font-size: 20px; margin-bottom: 4px; }
-  .diff-btn .d-label { font-size: 13px; }
-  .diff-btn .d-sub { font-size: 10px; color: #888; margin-top: 2px; }
-  .difficulty-info { margin-top: 10px; border-radius: 10px; padding: 11px 13px; font-size: 12px; line-height: 1.65; background: #f8f9fa; color: #444; border: 1px solid #eceff1; }
-  .difficulty-info b { color: #1a1a1a; }
-  .story-q { text-align: left; font-size: 20px; font-weight: 700; line-height: 1.6; color: #1a1a1a; word-break: keep-all; }
+  /* 난이도 */
+  .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .diff-btn { background: #fff; border: 2px solid #e0e0e0; border-radius: 12px; padding: 16px 10px; text-align: center; cursor: pointer; font-family: inherit; transition: all .15s; }
+  .diff-btn.normal.active { border-color: #4285f4; background: #e8f0fe; }
+  .diff-btn.hard.active { border-color: #ea4335; background: #fce8e6; }
+  .diff-btn .d-emoji { font-size: 24px; margin-bottom: 6px; }
+  .diff-btn .d-label { font-size: 15px; font-weight: 700; }
+  .diff-btn .d-desc { font-size: 11px; color: #666; margin-top: 4px; line-height: 1.5; }
+
+  /* 문제 수 */
+  .count-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .count-btn { background: #fff; border: 2px solid #e0e0e0; border-radius: 10px; padding: 12px 6px; text-align: center; cursor: pointer; font-size: 18px; font-weight: 700; font-family: inherit; transition: all .15s; }
+  .count-btn.active { border-color: #34a853; background: #e6f4ea; color: #137333; }
 
   .tab-bar { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 1px solid #e5e5e5; }
   .tab { background: none; border: none; padding: 8px 14px; font-size: 14px; color: #888; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; font-family: inherit; font-weight: 600; transition: color .15s; }
@@ -157,8 +152,8 @@
   .filter-btn.active { background:#e8f0fe; color:#1a73e8; border-color:#1a73e8; }
 
   @media (max-width: 400px) {
-    .q-text { font-size: 22px; }
     .result-score-big { font-size: 52px; }
+    .q-expr { font-size: 22px; }
   }
 </style>
 </head>
@@ -240,7 +235,7 @@
     <button class="back" onclick="showPage('pg-unit')">← 단원 선택으로</button>
     <h2 id="setup5-title"></h2>
 
-    <!-- 차시 선택 -->
+    <!-- 차시 -->
     <div class="card">
       <h3>📚 차시 선택 <span style="font-size:12px;font-weight:400;color:#888">(선택한 차시까지 누적 출제)</span></h3>
       <div class="lesson-list" id="lesson-list"></div>
@@ -250,45 +245,26 @@
     <div class="card">
       <h3>🎯 난이도</h3>
       <div class="diff-grid">
-        <button class="diff-btn diff-choice easy active" onclick="selectDiff('easy')">
-          <div class="d-emoji">😊</div>
-          <div class="d-label">쉬움</div>
-          <div class="d-sub">개념 확인</div>
-        </button>
-        <button class="diff-btn diff-choice normal" onclick="selectDiff('normal')">
+        <button class="diff-btn normal active" onclick="selectDiff('normal')" id="diff-normal">
           <div class="d-emoji">🤔</div>
           <div class="d-label">보통</div>
-          <div class="d-sub">교과서 기본</div>
+          <div class="d-desc">교과서 기본 수준<br>가분수→대분수 포함<br>대분수 덧셈·뺄셈</div>
         </button>
-        <button class="diff-btn diff-choice hard" onclick="selectDiff('hard')">
+        <button class="diff-btn hard" onclick="selectDiff('hard')" id="diff-hard">
           <div class="d-emoji">😤</div>
           <div class="d-label">어려움</div>
-          <div class="d-sub">도전 문제</div>
+          <div class="d-desc">받아내림 필요한 뺄셈<br>자연수-대분수 포함<br>문장제 일부 포함</div>
         </button>
       </div>
-      <div id="difficulty-info" class="difficulty-info"></div>
     </div>
 
     <!-- 문제 수 -->
     <div class="card">
       <h3>📝 문제 수</h3>
       <div class="count-grid">
-        <button class="diff-btn count-choice" id="cnt-5" onclick="selectCount(5)">
-          <div class="d-emoji">5</div>
-          <div class="d-label">문제</div>
-        </button>
-        <button class="diff-btn count-choice active" id="cnt-10" onclick="selectCount(10)">
-          <div class="d-emoji">10</div>
-          <div class="d-label">문제</div>
-        </button>
-        <button class="diff-btn count-choice" id="cnt-15" onclick="selectCount(15)">
-          <div class="d-emoji">15</div>
-          <div class="d-label">문제</div>
-        </button>
-        <button class="diff-btn count-choice" id="cnt-20" onclick="selectCount(20)">
-          <div class="d-emoji">20</div>
-          <div class="d-label">문제</div>
-        </button>
+        <button class="count-btn" id="cnt-5" onclick="selectCount(5)">5</button>
+        <button class="count-btn active" id="cnt-10" onclick="selectCount(10)">10</button>
+        <button class="count-btn" id="cnt-15" onclick="selectCount(15)">15</button>
       </div>
     </div>
 
@@ -308,13 +284,13 @@
     <div class="prog-bar"><div class="prog-fill" id="q3-prog-fill" style="width:0%"></div></div>
     <div class="q-card">
       <div class="q-type" id="q3-type-label"></div>
-      <div class="q-text" id="q3-text">?</div>
-      <div class="q-hint" id="q3-hint"></div>
+      <div class="q-expr" id="q3-text" style="font-size:28px"></div>
+      <div style="font-size:13px;color:#888;margin-top:8px" id="q3-hint"></div>
     </div>
     <div class="ans-area">
-      <div class="ans-frac-wrap">
-        <input type="number" id="ans3-main" placeholder="답" inputmode="numeric" style="font-size:20px;text-align:center;font-weight:700;max-width:120px;" />
-        <input type="number" id="ans3-rem" placeholder="나머지" inputmode="numeric" style="display:none;font-size:20px;text-align:center;font-weight:700;max-width:120px;" />
+      <div class="ans-wrap">
+        <input type="number" id="ans3-main" placeholder="답" inputmode="numeric" style="max-width:120px;font-size:20px;text-align:center;font-weight:700;" />
+        <input type="number" id="ans3-rem" placeholder="나머지" inputmode="numeric" style="display:none;max-width:120px;font-size:20px;text-align:center;font-weight:700;" />
         <button class="btn btn-primary btn-sm" id="btn3-submit" onclick="submitAns3()">확인</button>
       </div>
     </div>
@@ -329,12 +305,10 @@
       <span class="prog-text" id="q5-name-label" style="font-weight:700;color:#1a1a1a"></span>
     </div>
     <div class="prog-bar"><div class="prog-fill" id="q5-prog-fill" style="width:0%"></div></div>
-    <div class="q-card">
+    <div class="q-card" id="q5-card">
       <div class="q-type" id="q5-type-label"></div>
       <div id="q5-display"></div>
-      <div class="q-hint" id="q5-hint"></div>
     </div>
-    <!-- 답 입력 영역 (동적 생성) -->
     <div class="ans-area" id="ans5-area"></div>
     <div class="feedback" id="q5-feedback" style="display:none"></div>
     <button class="btn btn-gray" id="btn5-next" style="display:none" onclick="nextQ5()">다음 문제 →</button>
@@ -395,24 +369,15 @@
       <button class="tab" onclick="switchTab('tab-wrong')">오답 분석</button>
     </div>
     <div id="tab-overview">
-      <div class="card">
-        <h3>반별 보기</h3>
-        <div class="filter-grid" id="teacher-class-filter"></div>
-      </div>
+      <div class="card"><h3>반별 보기</h3><div class="filter-grid" id="teacher-class-filter"></div></div>
       <div class="metric-grid" id="teacher-metrics" style="grid-template-columns:repeat(2,1fr)"></div>
       <div class="card">
         <h3 id="teacher-list-title">학생별 현황</h3>
-        <div style="overflow-x:auto">
-          <table><thead><tr><th>반</th><th>이름</th><th>풀이수</th><th>평균 정답률</th><th>최근활동</th><th>오답수</th></tr></thead>
-          <tbody id="teacher-tbody"></tbody></table>
-        </div>
+        <div style="overflow-x:auto"><table><thead><tr><th>반</th><th>이름</th><th>풀이수</th><th>평균 정답률</th><th>최근활동</th><th>오답수</th></tr></thead><tbody id="teacher-tbody"></tbody></table></div>
       </div>
     </div>
     <div id="tab-detail" style="display:none">
-      <div class="card">
-        <h3>반별 보기</h3>
-        <div class="filter-grid" id="detail-class-filter"></div>
-      </div>
+      <div class="card"><h3>반별 보기</h3><div class="filter-grid" id="detail-class-filter"></div></div>
       <div class="row"><label>학생 선택</label><select id="detail-sel" onchange="renderDetail()"></select></div>
       <div id="detail-content"></div>
     </div>
@@ -420,212 +385,206 @@
   </div>
 
 </div>
-
 <script>
-// =============================================
+// ============================================================
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbyMyvulH0vMpkmHVQO338P13RA4P84dpTEzvloFGtTTwHMtA6uXoY8dwatUoX_J_VX2qQ/exec';
-// =============================================
+// ============================================================
 
-// ===================== 학생 데이터 =====================
+// ==================== 학생 데이터 ====================
 const CLASSES = {
-  "4-1": ["곽준혁","김가윤","김지원","김하성","김혜민","문지수","박선후","소강윤","심재훈","유준서","유지호","이서윤","이시아","이지후","장하진","조한결","차유나","최은서","최지형","황채윤"],
-  "4-2": ["곽현민","김도윤","김민재","김우람","김재원","류시온","박송현","배준우","서찬빈","안예린","오도윤","이다은","이서우","이시아","정사랑","조윤호","차예준","한서윤","함채민","황시윤"],
-  "4-3": ["강민석","강윤준","고경빈","권서연","김다원","김세연","김유하","김은성","김준영","배지은","이건우","이나연","이도영","이주원","임나엘","임하엘","전서하","최세인","하연우","하준","허지우","최유민","양은비"],
-  "4-4": ["강유한","김단우","김민승","김새론","김소민","김연수","김지우","문소희","박선우","박진우","송채연","안하준","오유성","오윤상","이찬이","이채원","임유안","조은빈","조은준","최도영","최우제","최주하","황시언"],
-  "4-5": ["김민찬","김보라","김시우","김우리","김태서","김현서","박해민","백채이","오준식","이다은","이다인","이서윤","이선우","이슬","이지연","임채율","장은석","전지원","정시온","최서은","노수민","김민재","조아린"],
-  "4-6": ["강형주","김도윤","김동하","김모과","김서하","김이현","김태현","노시원","박민호","박소율","방선재","송민준","안도현","이아린","이주한","이지오","임유림","정다하","조현서","한설","형로아","김보경"]
+  "4-1":["곽준혁","김가윤","김지원","김하성","김혜민","문지수","박선후","소강윤","심재훈","유준서","유지호","이서윤","이시아","이지후","장하진","조한결","차유나","최은서","최지형","황채윤"],
+  "4-2":["곽현민","김도윤","김민재","김우람","김재원","류시온","박송현","배준우","서찬빈","안예린","오도윤","이다은","이서우","이시아","정사랑","조윤호","차예준","한서윤","함채민","황시윤"],
+  "4-3":["강민석","강윤준","고경빈","권서연","김다원","김세연","김유하","김은성","김준영","배지은","이건우","이나연","이도영","이주원","임나엘","임하엘","전서하","최세인","하연우","하준","허지우","최유민","양은비"],
+  "4-4":["강유한","김단우","김민승","김새론","김소민","김연수","김지우","문소희","박선우","박진우","송채연","안하준","오유성","오윤상","이찬이","이채원","임유안","조은빈","조은준","최도영","최우제","최주하","황시언"],
+  "4-5":["김민찬","김보라","김시우","김우리","김태서","김현서","박해민","백채이","오준식","이다은","이다인","이서윤","이선우","이슬","이지연","임채율","장은석","전지원","정시온","최서은","노수민","김민재","조아린"],
+  "4-6":["강형주","김도윤","김동하","김모과","김서하","김이현","김태현","노시원","박민호","박소율","방선재","송민준","안도현","이아린","이주한","이지오","임유림","정다하","조현서","한설","형로아","김보경","최수현"]
 };
-const CLASS_PASSWORDS = {'4-1':'4101','4-2':'4202','4-3':'4303','4-4':'4404','4-5':'4505','4-6':'4606'};
-const STUDENTS = Object.entries(CLASSES).flatMap(([cls, names]) => names.map((name, i) => ({ id:`${cls}-${i+1}`, className:cls, name })));
+const CLASS_PASSWORDS={'4-1':'4101','4-2':'4202','4-3':'4303','4-4':'4404','4-5':'4505','4-6':'4606'};
+const STUDENTS=Object.entries(CLASSES).flatMap(([cls,names])=>names.map((name,i)=>({id:`${cls}-${i+1}`,className:cls,name})));
 
-// ===================== 5단원 차시 정의 =====================
-const LESSONS = [
-  { id:1, title:'분수의 덧셈 (1)', sub:'합이 1보다 작은 (진분수)+(진분수)', badge:'1차시' },
-  { id:2, title:'분수의 덧셈 (2)', sub:'(자연수)+(진분수) / 합이 1보다 큰 (진분수)+(진분수)', badge:'2차시' },
-  { id:3, title:'분수의 덧셈 (3)', sub:'(대분수)+(대분수)', badge:'3차시' },
-  { id:4, title:'분수의 뺄셈 (1)', sub:'(진분수)-(진분수)', badge:'4차시' },
-  { id:5, title:'분수의 뺄셈 (2)', sub:'분수 부분끼리 뺄 수 있는 (대분수)-(대분수)', badge:'5차시' },
-  { id:6, title:'분수의 뺄셈 (3)', sub:'(자연수)-(분수)', badge:'6차시' },
-  { id:7, title:'분수의 뺄셈 (4)', sub:'분수 부분끼리 뺄 수 없는 (대분수)-(대분수)', badge:'7차시' },
+// ==================== 5단원 차시 ====================
+const LESSONS=[
+  {id:1,title:'분수의 덧셈 (1)',sub:'합이 1보다 작은 (진분수)+(진분수)',badge:'1차시'},
+  {id:2,title:'분수의 덧셈 (2)',sub:'(자연수)+(진분수) / 합이 1보다 큰 (진분수)+(진분수)',badge:'2차시'},
+  {id:3,title:'분수의 덧셈 (3)',sub:'(대분수)+(대분수)',badge:'3차시'},
+  {id:4,title:'분수의 뺄셈 (1)',sub:'(진분수)-(진분수)',badge:'4차시'},
+  {id:5,title:'분수의 뺄셈 (2)',sub:'분수 부분끼리 뺄 수 있는 (대분수)-(대분수)',badge:'5차시'},
+  {id:6,title:'분수의 뺄셈 (3)',sub:'(자연수)-(분수)',badge:'6차시'},
+  {id:7,title:'분수의 뺄셈 (4)',sub:'분수 부분끼리 뺄 수 없는 (대분수)-(대분수)',badge:'7차시'},
 ];
 
-const DIFF_LABELS = { easy:'쉬움', normal:'보통', hard:'어려움' };
-const DIFF_INFO = {
-  easy: '<b>쉬움</b> · 분모가 작은 문제를 중심으로 내고, 받아내림은 최소화해요.<br>합이 1보다 작은 진분수 문제와 바로 계산되는 문제 비중이 높아요.',
-  normal: '<b>보통</b> · 교과서 기본 수준으로 골고루 나와요.<br>가분수를 대분수로 바꾸는 문제, 대분수 덧셈·뺄셈 문제가 함께 나와요.',
-  hard: '<b>어려움</b> · 받아내림이 필요한 뺄셈과 대분수 문제가 더 자주 나와요.<br>일부 문제는 문장제로 제시되어 식을 떠올려야 해요.'
+// ==================== 문장제 템플릿 ====================
+// 교과서 스타일 캐릭터: 여울이, 순달이, 달곰이, 지안이, 민호
+const STORY_TEMPLATES = {
+  // 덧셈 문장제
+  add: [
+    (a,b,da,db,unit)=>`여울이는 케이크를 ${a}/${da}${unit} 먹고, 순달이는 ${b}/${db}${unit} 먹었어요. 둘이 먹은 케이크는 모두 몇 ${unit}인가요?`,
+    (a,b,da,db,unit)=>`달곰이가 리본 ${a}/${da}${unit}를 가져왔고, 지안이가 ${b}/${db}${unit}를 더 가져왔어요. 리본은 모두 몇 ${unit}인가요?`,
+    (a,b,da,db,unit)=>`순달이는 오늘 ${a}/${da}${unit}를 걸었고, 내일 ${b}/${db}${unit}를 더 걸을 거예요. 모두 몇 ${unit}를 걷게 되나요?`,
+    (a,b,da,db,unit)=>`여울이가 물 ${a}/${da}${unit}를 마셨고, 달곰이가 ${b}/${db}${unit}를 마셨어요. 둘이 마신 물은 모두 몇 ${unit}인가요?`,
+  ],
+  // 뺄셈 문장제
+  sub: [
+    (a,b,da,db,unit)=>`순달이는 주스 ${a}/${da}${unit}를 가지고 있었는데 ${b}/${db}${unit}를 마셨어요. 남은 주스는 몇 ${unit}인가요?`,
+    (a,b,da,db,unit)=>`여울이는 리본 ${a}/${da}${unit}를 샀는데 선물 포장에 ${b}/${db}${unit}를 사용했어요. 남은 리본은 몇 ${unit}인가요?`,
+    (a,b,da,db,unit)=>`달곰이는 ${a}/${da}km를 걸어야 하는데 이미 ${b}/${db}km를 걸었어요. 앞으로 몇 km를 더 걸어야 하나요?`,
+    (a,b,da,db,unit)=>`지안이는 밀가루 ${a}/${da}${unit}를 가지고 있었는데 빵을 만드는 데 ${b}/${db}${unit}를 사용했어요. 남은 밀가루는 몇 ${unit}인가요?`,
+  ],
+  // 대분수 덧셈 문장제
+  addMixed: [
+    (aw,an,da,bw,bn,db,unit)=>`여울이는 어제 ${aw}과${an}/${da}${unit}를 걸었고, 오늘은 ${bw}과${bn}/${db}${unit}를 걸었어요. 이틀 동안 걸은 거리는 모두 몇 ${unit}인가요?`,
+    (aw,an,da,bw,bn,db,unit)=>`달곰이는 파란 색종이 ${aw}과${an}/${da}장과 빨간 색종이 ${bw}과${bn}/${db}장을 준비했어요. 색종이는 모두 몇 장인가요?`,
+    (aw,an,da,bw,bn,db,unit)=>`순달이는 물 ${aw}과${an}/${da}${unit}를 마셨고, 지안이는 ${bw}과${bn}/${db}${unit}를 마셨어요. 둘이 마신 물은 모두 몇 ${unit}인가요?`,
+  ],
+  // 대분수 뺄셈 문장제
+  subMixed: [
+    (aw,an,da,bw,bn,db,unit)=>`여울이는 끈 ${aw}과${an}/${da}${unit}를 가지고 있었는데 선물 포장에 ${bw}과${bn}/${db}${unit}를 사용했어요. 남은 끈은 몇 ${unit}인가요?`,
+    (aw,an,da,bw,bn,db,unit)=>`달곰이는 밀가루 ${aw}과${an}/${da}kg이 있었는데 쿠키를 만드는 데 ${bw}과${bn}/${db}kg을 사용했어요. 남은 밀가루는 몇 kg인가요?`,
+    (aw,an,da,bw,bn,db,unit)=>`순달이는 ${aw}과${an}/${da}km를 걸어야 하는데 이미 ${bw}과${bn}/${db}km를 걸었어요. 앞으로 몇 km를 더 걸어야 하나요?`,
+  ],
+  // 자연수-분수 문장제
+  subNatural: [
+    (w,n,d,unit)=>`여울이는 케이크 ${w}판을 만들었는데 달곰이에게 ${n}/${d}판을 나눠줬어요. 남은 케이크는 몇 판인가요?`,
+    (w,n,d,unit)=>`순달이는 주스 ${w}${unit}를 샀는데 오늘 ${n}/${d}${unit}를 마셨어요. 남은 주스는 몇 ${unit}인가요?`,
+    (w,n,d,unit)=>`지안이는 리본 ${w}${unit}를 가지고 있었는데 ${n}/${d}${unit}를 사용했어요. 남은 리본은 몇 ${unit}인가요?`,
+  ],
 };
 
-// ===================== 상태 =====================
-const STORE_KEY = 'math_quiz_grade4_v2';
-let db = {};
-let currentClass = null;
-let teacherClassFilter = 'all';
-let curStudent = null;
-let currentUnit = null;
+const UNITS = ['판', 'L', 'kg', '장', 'm'];
 
-// 3단원 상태
-let cur3Qs = [], cur3Idx = 0, cur3Correct = 0, cur3Wrong = 0, cur3Answered = false, cur3WrongLog = [];
+function pickStory(arr) { return arr[Math.floor(Math.random()*arr.length)]; }
 
-// 5단원 상태
-let cur5Qs = [], cur5Idx = 0, cur5Correct = 0, cur5Wrong = 0, cur5Answered = false, cur5WrongLog = [];
-let sel5Lesson = 3; // 기본: 3차시까지
-let sel5Diff = 'easy';
-let sel5Count = 10;
+// ==================== 상태 ====================
+const STORE_KEY='math_quiz_grade4_v2';
+let db={};
+let currentClass=null;
+let teacherClassFilter='all';
+let curStudent=null;
+let currentUnit=null;
+let cur3Qs=[],cur3Idx=0,cur3Correct=0,cur3Wrong=0,cur3Answered=false,cur3WrongLog=[];
+let cur5Qs=[],cur5Idx=0,cur5Correct=0,cur5Wrong=0,cur5Answered=false,cur5WrongLog=[];
+let sel5Lesson=3,sel5Diff='normal',sel5Count=10;
 
-// ===================== DB =====================
-function loadDB() {
-  try { const s = localStorage.getItem(STORE_KEY); if (s) db = JSON.parse(s); } catch(e) {}
-  STUDENTS.forEach(s => { if (!db[s.id]) db[s.id] = { sessions3:[], sessions5:[], wrongPool3:[], wrongPool5:[] }; });
+function loadDB(){
+  try{const s=localStorage.getItem(STORE_KEY);if(s)db=JSON.parse(s);}catch(e){}
+  STUDENTS.forEach(s=>{if(!db[s.id])db[s.id]={sessions3:[],sessions5:[],wrongPool3:[],wrongPool5:[]};});
 }
-function saveDB() { try { localStorage.setItem(STORE_KEY, JSON.stringify(db)); } catch(e) {} }
+function saveDB(){try{localStorage.setItem(STORE_KEY,JSON.stringify(db));}catch(e){}}
 
-// ===================== 페이지 전환 =====================
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+// ==================== 페이지 ====================
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo(0,0);
-  if (id === 'pg-login') { if (!currentClass) { showPage('pg-class'); return; } renderStuGrid(); }
-  if (id === 'pg-teacher') renderTeacher();
+  if(id==='pg-login'){if(!currentClass){showPage('pg-class');return;}renderStuGrid();}
+  if(id==='pg-teacher')renderTeacher();
 }
-
-// ===================== 반/학생 선택 =====================
-function selectClass(cls) {
-  const pw = prompt(cls + ' 비밀번호를 입력하세요.');
-  if (pw === CLASS_PASSWORDS[cls]) {
-    currentClass = cls;
-    document.getElementById('class-title').textContent = cls + ' 수학 퀴즈';
-    document.getElementById('student-list-title').textContent = cls + ' 학생 명단';
-    showPage('pg-login');
-  } else if (pw !== null) { alert('비밀번호가 맞지 않습니다.'); }
+function selectClass(cls){
+  const pw=prompt(cls+' 비밀번호를 입력하세요.');
+  if(pw===CLASS_PASSWORDS[cls]){currentClass=cls;document.getElementById('class-title').textContent=cls+' 수학 퀴즈';document.getElementById('student-list-title').textContent=cls+' 학생 명단';showPage('pg-login');}
+  else if(pw!==null)alert('비밀번호가 맞지 않습니다.');
 }
-function goClassPage() { currentClass = null; curStudent = null; showPage('pg-class'); }
-
-function renderStuGrid() {
-  const g = document.getElementById('stu-grid');
-  g.innerHTML = '';
-  STUDENTS.filter(s => s.className === currentClass).forEach(s => {
-    const d = document.createElement('button');
-    d.className = 'stu-btn';
-    d.innerHTML = s.name;
-    d.onclick = () => selectStudent(s);
-    g.appendChild(d);
+function goClassPage(){currentClass=null;curStudent=null;showPage('pg-class');}
+function renderStuGrid(){
+  const g=document.getElementById('stu-grid');g.innerHTML='';
+  STUDENTS.filter(s=>s.className===currentClass).forEach(s=>{
+    const d=document.createElement('button');d.className='stu-btn';d.textContent=s.name;d.onclick=()=>selectStudent(s);g.appendChild(d);
   });
 }
-
-function selectStudent(s) {
-  curStudent = s;
-  document.getElementById('unit-title').textContent = `${s.className} ${s.name} — 단원 선택`;
-  showPage('pg-unit');
+function selectStudent(s){
+  curStudent=s;document.getElementById('unit-title').textContent=`${s.className} ${s.name} — 단원 선택`;showPage('pg-unit');
+}
+const TEACHER_PASSWORD='sm11';
+function openTeacherDashboard(){
+  const pw=prompt('교사 확인 비밀번호를 입력하세요.');
+  if(pw===TEACHER_PASSWORD)showPage('pg-teacher');else if(pw!==null)alert('비밀번호가 맞지 않습니다.');
 }
 
-// ===================== 단원 선택 =====================
-function selectUnit(unit) {
-  currentUnit = unit;
-  if (unit === '3') {
-    document.getElementById('setup3-title').textContent = `${curStudent.className} ${curStudent.name} · 3단원`;
-    const wp = db[curStudent.id].wrongPool3 || [];
-    const rn = document.getElementById('retry-notice3');
-    const br = document.getElementById('btn-retry3');
-    if (wp.length > 0) {
-      rn.style.display = 'block';
-      rn.textContent = `오답 ${wp.length}개가 있어요. 오답 재도전을 하면 비슷한 유형의 새 문제가 나옵니다.`;
-      br.style.display = 'block';
-    } else { rn.style.display = 'none'; br.style.display = 'none'; }
+// ==================== 단원 선택 ====================
+function selectUnit(unit){
+  currentUnit=unit;
+  if(unit==='3'){
+    document.getElementById('setup3-title').textContent=`${curStudent.className} ${curStudent.name} · 3단원`;
+    const wp=db[curStudent.id].wrongPool3||[];
+    const rn=document.getElementById('retry-notice3'),br=document.getElementById('btn-retry3');
+    if(wp.length>0){rn.style.display='block';rn.textContent=`오답 ${wp.length}개가 있어요.`;br.style.display='block';}
+    else{rn.style.display='none';br.style.display='none';}
     showPage('pg-setup3');
   } else {
-    document.getElementById('setup5-title').textContent = `${curStudent.className} ${curStudent.name} · 5단원`;
+    document.getElementById('setup5-title').textContent=`${curStudent.className} ${curStudent.name} · 5단원`;
     renderLessonList();
-    updateDifficultyInfo();
-    const wp = db[curStudent.id].wrongPool5 || [];
-    const rn = document.getElementById('retry-notice5');
-    const br = document.getElementById('btn-retry5');
-    if (wp.length > 0) {
-      rn.style.display = 'block';
-      rn.textContent = `오답 ${wp.length}개가 있어요.`;
-      br.style.display = 'block';
-    } else { rn.style.display = 'none'; br.style.display = 'none'; }
+    const wp=db[curStudent.id].wrongPool5||[];
+    const rn=document.getElementById('retry-notice5'),br=document.getElementById('btn-retry5');
+    if(wp.length>0){rn.style.display='block';rn.textContent=`오답 ${wp.length}개가 있어요.`;br.style.display='block';}
+    else{rn.style.display='none';br.style.display='none';}
     showPage('pg-setup5');
   }
 }
-function showSetup3() { selectUnit('3'); }
-function showSetup5() { selectUnit('5'); }
+function showSetup3(){selectUnit('3');}
+function showSetup5(){selectUnit('5');}
 
-// 차시 목록 렌더링
-function renderLessonList() {
-  const list = document.getElementById('lesson-list');
-  list.innerHTML = '';
-  LESSONS.forEach(l => {
-    const el = document.createElement('div');
-    el.className = 'lesson-item' + (l.id === sel5Lesson ? ' selected' : '');
-    el.innerHTML = `
-      <div class="l-num">${l.badge}</div>
-      <div class="l-title">${l.title}</div>
-      <div class="l-sub">${l.sub}</div>
-      <span class="l-badge">1~${l.id}차시 누적</span>
-    `;
-    el.onclick = () => { sel5Lesson = l.id; renderLessonList(); };
+function renderLessonList(){
+  const list=document.getElementById('lesson-list');list.innerHTML='';
+  LESSONS.forEach(l=>{
+    const el=document.createElement('div');
+    el.className='lesson-item'+(l.id===sel5Lesson?' selected':'');
+    el.innerHTML=`<div class="l-num">${l.badge}</div><div class="l-title">${l.title}</div><div class="l-sub">${l.sub}</div><span class="l-badge">1~${l.id}차시 누적</span>`;
+    el.onclick=()=>{sel5Lesson=l.id;renderLessonList();};
     list.appendChild(el);
   });
 }
-
-function updateDifficultyInfo() {
-  const box = document.getElementById('difficulty-info');
-  if (box) box.innerHTML = DIFF_INFO[sel5Diff] || '';
+function selectDiff(d){
+  sel5Diff=d;
+  document.getElementById('diff-normal').classList.toggle('active',d==='normal');
+  document.getElementById('diff-hard').classList.toggle('active',d==='hard');
+}
+function selectCount(n){
+  sel5Count=n;
+  [5,10,15].forEach(v=>{const el=document.getElementById('cnt-'+v);if(el)el.classList.toggle('active',v===n);});
 }
 
-function selectDiff(d) {
-  sel5Diff = d;
-  document.querySelectorAll('.diff-choice').forEach(b => {
-    b.classList.toggle('active', b.classList.contains(d));
-  });
-  updateDifficultyInfo();
+// ==================== 유틸 ====================
+function rand(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
+function formatFrac(w,n,d){
+  if(n===0)return`${w}`;
+  if(w===0)return`${n}/${d}`;
+  return`${w}과 ${n}/${d}`;
 }
 
-function selectCount(n) {
-  sel5Count = n;
-  [5,10,15,20].forEach(v => {
-    const el = document.getElementById('cnt-'+v);
-    if (el) el.classList.toggle('active', v === n);
-  });
+// HTML 분수 렌더링
+function fH(n,d){return`<span class="frac"><span class="fn">${n}</span><span class="fd">${d}</span></span>`;}
+function mH(w,n,d){
+  if(w===0)return fH(n,d);
+  if(n===0)return`<span style="font-size:26px;font-weight:700">${w}</span>`;
+  return`<span class="mixed-frac"><span class="whole">${w}</span>${fH(n,d)}</span>`;
 }
 
-// ===================== 교사 대시보드 =====================
-const TEACHER_PASSWORD = 'sm11';
-function openTeacherDashboard() {
-  const pw = prompt('교사 확인 비밀번호를 입력하세요.');
-  if (pw === TEACHER_PASSWORD) showPage('pg-teacher');
-  else if (pw !== null) alert('비밀번호가 맞지 않습니다.');
-}
-
-// ===================== 3단원 문제 생성 =====================
-function rand(a, b) { return Math.floor(Math.random() * (b - a + 1)) + a; }
-
-function makeQ3(type) {
-  if (type === 'mul') { const a=rand(12,99),b=rand(12,99); return {type:'mul',q:`${a} × ${b} = ?`,answer:a*b,remainder:null,text:`${a}×${b}`,a,b}; }
-  if (type === 'mul3') { const a=rand(100,999),b=rand(12,99); return {type:'mul3',q:`${a} × ${b} = ?`,answer:a*b,remainder:null,text:`${a}×${b}`,a,b}; }
-  if (type === 'div') { const b=rand(12,99),q2=rand(2,9),r=rand(0,b-1),a=b*q2+r; return {type:'div',q:`${a} ÷ ${b} = ?`,answer:q2,remainder:r,text:`${a}÷${b}`,a,b}; }
+// ==================== 3단원 문제 ====================
+function makeQ3(type){
+  if(type==='mul'){const a=rand(12,99),b=rand(12,99);return{type:'mul',q:`${a} × ${b}`,answer:a*b,remainder:null,text:`${a}×${b}`,a,b};}
+  if(type==='mul3'){const a=rand(100,999),b=rand(12,99);return{type:'mul3',q:`${a} × ${b}`,answer:a*b,remainder:null,text:`${a}×${b}`,a,b};}
+  if(type==='div'){const b=rand(12,99),q2=rand(2,9),r=rand(0,b-1),a=b*q2+r;return{type:'div',q:`${a} ÷ ${b}`,answer:q2,remainder:r,text:`${a}÷${b}`,a,b};}
   const b=rand(11,30),q2=rand(10,30),r=rand(0,b-1),a=b*q2+r;
-  return {type:'div3',q:`${a} ÷ ${b} = ?`,answer:q2,remainder:r,text:`${a}÷${b}`,a,b};
+  return{type:'div3',q:`${a} ÷ ${b}`,answer:q2,remainder:r,text:`${a}÷${b}`,a,b};
 }
-function makeSimilar3(w) {
-  if (w.type==='mul') { const a=Math.max(12,w.a+rand(-6,6)),b=Math.max(12,w.b+rand(-6,6)); return {type:'mul',q:`${a} × ${b} = ?`,answer:a*b,remainder:null,text:`${a}×${b}`,a,b}; }
-  if (w.type==='mul3') { const a=Math.max(100,Math.min(999,w.a+rand(-20,20))),b=Math.max(12,w.b+rand(-6,6)); return {type:'mul3',q:`${a} × ${b} = ?`,answer:a*b,remainder:null,text:`${a}×${b}`,a,b}; }
+function makeSimilar3(w){
+  if(w.type==='mul'){const a=Math.max(12,w.a+rand(-6,6)),b=Math.max(12,w.b+rand(-6,6));return{type:'mul',q:`${a} × ${b}`,answer:a*b,remainder:null,text:`${a}×${b}`,a,b};}
+  if(w.type==='mul3'){const a=Math.max(100,Math.min(999,w.a+rand(-20,20))),b=Math.max(12,w.b+rand(-6,6));return{type:'mul3',q:`${a} × ${b}`,answer:a*b,remainder:null,text:`${a}×${b}`,a,b};}
   const b=Math.max(11,w.b+rand(-3,3)),q2=Math.max(w.type==='div3'?10:2,w.answer+rand(-2,2)),r=rand(0,b-1),a=b*q2+r;
-  return {type:w.type,q:`${a} ÷ ${b} = ?`,answer:q2,remainder:r,text:`${a}÷${b}`,a,b};
+  return{type:w.type,q:`${a} ÷ ${b}`,answer:q2,remainder:r,text:`${a}÷${b}`,a,b};
 }
-function genQs3(isRetry, count) {
-  const qs = [];
-  if (isRetry) {
-    const pool = [...(db[curStudent.id].wrongPool3||[])].sort(()=>Math.random()-.5);
-    for (let i=0;i<Math.min(count,pool.length);i++) qs.push(makeSimilar3(pool[i]));
-    while (qs.length<count) qs.push(makeQ3(['mul','mul3','div','div3'][rand(0,3)]));
+function genQs3(isRetry,count){
+  const qs=[];
+  if(isRetry){
+    const pool=[...(db[curStudent.id].wrongPool3||[])].sort(()=>Math.random()-.5);
+    for(let i=0;i<Math.min(count,pool.length);i++)qs.push(makeSimilar3(pool[i]));
+    while(qs.length<count)qs.push(makeQ3(['mul','mul3','div','div3'][rand(0,3)]));
   } else {
-    const type = document.getElementById('sel-type3').value;
-    for (let i=0;i<count;i++) {
+    const type=document.getElementById('sel-type3').value;
+    for(let i=0;i<count;i++){
       let t;
-      if (type==='mul') t=i%2===0?'mul':'mul3';
-      else if (type==='div') t=i%2===0?'div':'div3';
+      if(type==='mul')t=i%2===0?'mul':'mul3';
+      else if(type==='div')t=i%2===0?'div':'div3';
       else t=['mul','mul3','div','div3'][i%4];
       qs.push(makeQ3(t));
     }
@@ -633,588 +592,390 @@ function genQs3(isRetry, count) {
   return qs;
 }
 
-// ===================== 5단원 문제 생성 =====================
-function getDenomRange() {
-  if (sel5Diff === 'easy') return [2, 6];      // 작은 분모 중심
-  if (sel5Diff === 'normal') return [3, 12];   // 교과서 기본 수준
-  return [4, 20];                              // 도전 수준
+// ==================== 5단원 난이도별 문제 생성 ====================
+
+// ── 보통 난이도 ──
+// 분모 2~10, 받아올림/받아내림 포함, 가분수→대분수 변환, 대분수 덧셈·뺄셈
+function makeQ5_normal(lessonId) {
+  const pool = getTypePool(lessonId);
+  const type = pool[rand(0, pool.length-1)];
+  const den = rand(2, 10);
+  return buildQ5(type, den, 'normal', false);
 }
 
-function minDenominatorFor(type) {
-  if (['add_pp_lt1', 'add_pp_gt1', 'add_mm', 'sub_pp', 'sub_mm_cant'].includes(type)) return 3;
-  return 2;
+// ── 어려움 난이도 ──
+// 분모 5~15, 받아내림 필요한 뺄셈 포함, 자연수-대분수, 문장제 30% 포함
+function makeQ5_hard(lessonId) {
+  const pool = getTypePool(lessonId);
+  // 어려움은 받아내림 유형 가중치 높임
+  const hardPool = [];
+  pool.forEach(t => {
+    hardPool.push(t);
+    if (t === 'sub_mm_cant' || t === 'sub_nm') hardPool.push(t); // 가중치 2배
+  });
+  const type = hardPool[rand(0, hardPool.length-1)];
+  const den = rand(5, 15);
+  const useStory = Math.random() < 0.30; // 30% 문장제
+  return buildQ5(type, den, 'hard', useStory);
 }
 
-function pickDenominator(type) {
-  const [lo, hi] = getDenomRange();
-  return rand(Math.max(lo, minDenominatorFor(type)), hi);
+function getTypePool(lessonId) {
+  const pool = [];
+  if(lessonId>=1) pool.push('add_pp_lt1');
+  if(lessonId>=2) pool.push('add_np','add_pp_gt1');
+  if(lessonId>=3) pool.push('add_mm');
+  if(lessonId>=4) pool.push('sub_pp');
+  if(lessonId>=5) pool.push('sub_mm_can');
+  if(lessonId>=6) pool.push('sub_nm');
+  if(lessonId>=7) pool.push('sub_mm_cant');
+  return pool;
 }
 
-function wholeRange() {
-  if (sel5Diff === 'easy') return [1, 3];
-  if (sel5Diff === 'normal') return [1, 5];
-  return [2, 8];
-}
+function buildQ5(type, den, diff, useStory) {
+  let ansW, ansN, ansD=den, qType, displayHTML, storyText=null;
+  let an, bn, aw, bw;
 
-function weightedPick(items) {
-  const total = items.reduce((sum, item) => sum + item.w, 0);
-  let r = Math.random() * total;
-  for (const item of items) {
-    r -= item.w;
-    if (r <= 0) return item.t;
+  if(type==='add_pp_lt1') {
+    do{an=rand(1,den-1);bn=rand(1,den-1);}while(an+bn>=den);
+    ansW=0; ansN=an+bn; ansD=den;
+    qType='합이 1보다 작은 (진분수)+(진분수)';
+    displayHTML=makeExprHTML(0,an,den,'+',0,bn,den);
+    if(useStory){const u=UNITS[rand(0,3)];storyText=pickStory(STORY_TEMPLATES.add)(an,bn,den,den,u);}
   }
-  return items[items.length - 1].t;
-}
-
-function availableTypesByLesson(lessonId) {
-  const types = [];
-  if (lessonId >= 1) types.push('add_pp_lt1');
-  if (lessonId >= 2) types.push('add_np', 'add_pp_gt1');
-  if (lessonId >= 3) types.push('add_mm');
-  if (lessonId >= 4) types.push('sub_pp');
-  if (lessonId >= 5) types.push('sub_mm_can');
-  if (lessonId >= 6) types.push('sub_nm');
-  if (lessonId >= 7) types.push('sub_mm_cant');
-  return types;
-}
-
-function pickTypeForLesson(lessonId) {
-  const allowed = availableTypesByLesson(lessonId);
-  const weightMap = {
-    easy:   { add_pp_lt1:5, add_np:3, add_pp_gt1:1, add_mm:1, sub_pp:4, sub_mm_can:2, sub_nm:1, sub_mm_cant:1 },
-    normal: { add_pp_lt1:3, add_np:2, add_pp_gt1:2, add_mm:2, sub_pp:3, sub_mm_can:2, sub_nm:2, sub_mm_cant:2 },
-    hard:   { add_pp_lt1:1, add_np:1, add_pp_gt1:3, add_mm:3, sub_pp:1, sub_mm_can:2, sub_nm:3, sub_mm_cant:4 }
-  }[sel5Diff];
-  return weightedPick(allowed.map(t => ({ t, w: weightMap[t] || 1 })));
-}
-
-// 최대공약수
-function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
-
-// 분수 약분
-function simplify(n, d) {
-  const g = gcd(Math.abs(n), d);
-  return [n/g, d/g];
-}
-
-// 분수 덧셈/뺄셈 결과를 대분수 형태로 반환 {whole, num, den}
-function toMixed(num, den) {
-  if (num < den) return { whole: 0, num, den };
-  const w = Math.floor(num / den);
-  const n = num % den;
-  return { whole: w, num: n, den };
-}
-
-function makeQ5(lessonId) {
-  const type = pickTypeForLesson(lessonId);
-  const den = pickDenominator(type);
-  return maybeAddStory(buildQ5(type, den));
-}
-
-function buildQ5(type, den) {
-  let aw, bw, an, bn, ansW, ansN, ansD, qStr, qType;
-  const [wMin, wMax] = wholeRange();
-
-  if (type === 'add_pp_lt1') {
-    // 쉬움에서 많이 나오는 기본형: 합이 1보다 작은 진분수+진분수
-    do { an = rand(1, den-1); bn = rand(1, den-1); } while (an + bn >= den);
-    ansW = 0; ansN = an + bn; ansD = den;
-    qType = '합이 1보다 작은 (진분수)+(진분수)';
-    qStr = `${an}/${den} + ${bn}/${den}`;
+  else if(type==='add_pp_gt1') {
+    do{an=rand(1,den-1);bn=rand(1,den-1);}while(an+bn<=den);
+    const tot=an+bn; ansW=Math.floor(tot/den); ansN=tot%den; ansD=den;
+    qType='합이 1보다 큰 (진분수)+(진분수)';
+    displayHTML=makeExprHTML(0,an,den,'+',0,bn,den);
+    if(useStory){const u=UNITS[rand(0,3)];storyText=pickStory(STORY_TEMPLATES.add)(an,bn,den,den,u);}
   }
-  else if (type === 'add_pp_gt1') {
-    // 계산 결과가 가분수이면 반드시 대분수로 나타내는 유형
-    do { an = rand(1, den-1); bn = rand(1, den-1); } while (an + bn <= den);
-    const total = an + bn;
-    ansW = Math.floor(total / den); ansN = total % den; ansD = den;
-    qType = '합이 1보다 큰 (진분수)+(진분수)';
-    qStr = `${an}/${den} + ${bn}/${den}`;
+  else if(type==='add_np') {
+    aw=rand(1,5); an=rand(1,den-1);
+    ansW=aw; ansN=an; ansD=den;
+    qType='(자연수)+(진분수)';
+    displayHTML=`<div class="q-expr"><span style="font-size:26px;font-weight:700">${aw}</span><span class="op-text">+</span>${fH(an,den)}<span class="op-text">=?</span></div>`;
+    if(useStory){const u=UNITS[rand(0,3)];storyText=pickStory(STORY_TEMPLATES.add)(aw,an,den,den,u);}
   }
-  else if (type === 'add_np') {
-    // 자연수+진분수
-    aw = rand(wMin, Math.min(wMax, 5)); an = rand(1, den-1);
-    ansW = aw; ansN = an; ansD = den;
-    qType = '(자연수)+(진분수)';
-    qStr = `${aw} + ${an}/${den}`;
+  else if(type==='add_mm') {
+    aw=rand(1,4); an=rand(1,den-1);
+    bw=rand(1,4); bn=rand(1,den-1);
+    const fs=an+bn, tw=aw+bw;
+    if(fs>=den){ansW=tw+Math.floor(fs/den);ansN=fs%den;}else{ansW=tw;ansN=fs;}
+    ansD=den;
+    qType='(대분수)+(대분수)';
+    displayHTML=makeExprHTML(aw,an,den,'+',bw,bn,den);
+    if(useStory){const u=UNITS[rand(0,3)];storyText=pickStory(STORY_TEMPLATES.addMixed)(aw,an,den,bw,bn,den,u);}
   }
-  else if (type === 'add_mm') {
-    // 대분수+대분수: 난이도에 따라 받아올림 빈도를 조절
-    aw = rand(wMin, Math.min(wMax, 5)); bw = rand(wMin, Math.min(wMax, 5));
-    if (sel5Diff === 'easy') {
-      do { an = rand(1, den-1); bn = rand(1, den-1); } while (an + bn >= den);
-    } else if (sel5Diff === 'hard') {
-      do { an = rand(1, den-1); bn = rand(1, den-1); } while (an + bn < den);
-    } else {
-      an = rand(1, den-1); bn = rand(1, den-1);
+  else if(type==='sub_pp') {
+    do{an=rand(1,den-1);bn=rand(1,den-1);}while(an<=bn);
+    ansW=0; ansN=an-bn; ansD=den;
+    qType='(진분수)-(진분수)';
+    displayHTML=makeExprHTML(0,an,den,'-',0,bn,den);
+    if(useStory){const u=UNITS[rand(0,3)];storyText=pickStory(STORY_TEMPLATES.sub)(an,bn,den,den,u);}
+  }
+  else if(type==='sub_mm_can') {
+    // 분수 부분끼리 뺄 수 있음 (an >= bn)
+    aw=rand(2,6); an=rand(1,den-1);
+    bw=rand(1,aw-1); bn=rand(1,an);
+    ansW=aw-bw; ansN=an-bn; ansD=den;
+    qType='분수 부분끼리 뺄 수 있는 (대분수)-(대분수)';
+    displayHTML=makeExprHTML(aw,an,den,'-',bw,bn,den);
+    if(useStory){const u=UNITS[rand(0,3)];storyText=pickStory(STORY_TEMPLATES.subMixed)(aw,an,den,bw,bn,den,u);}
+  }
+  else if(type==='sub_nm') {
+    // 자연수 - 진분수/대분수
+    aw=rand(2,7); an=rand(1,den-1);
+    // 어려움: 자연수 - 대분수도 가능
+    if(diff==='hard' && Math.random()<0.5 && aw>=3) {
+      bw=rand(1,aw-1); bn=rand(an+1,den-1); // bn > an → 받아내림 필요
+      if(bn<=an) bn=an+1;
+      if(bn>=den) bn=den-1;
+      // (aw-bw-1) + (den+an-bn)/den
+      const newN=den+an-bn;
+      if(newN>0 && newN<den) {
+        ansW=aw-bw-1; ansN=newN; ansD=den;
+        qType='분수 부분끼리 뺄 수 없는 (대분수)-(대분수)';
+        displayHTML=makeExprHTML(aw,an,den,'-',bw,bn,den);
+        if(useStory){const u=UNITS[rand(0,3)];storyText=pickStory(STORY_TEMPLATES.subMixed)(aw,an,den,bw,bn,den,u);}
+        return {type,qType,displayHTML,storyText,ansW,ansN,ansD,den,diff};
+      }
     }
-    const fracSum = an + bn;
-    ansW = aw + bw + Math.floor(fracSum / den);
-    ansN = fracSum % den; ansD = den;
-    qType = '(대분수)+(대분수)';
-    qStr = `${aw}과${an}/${den} + ${bw}과${bn}/${den}`;
+    // 기본: 자연수 - 진분수
+    ansW=aw-1; ansN=den-an; ansD=den;
+    if(ansN===den){ansW=aw;ansN=0;}
+    qType='(자연수)-(분수)';
+    displayHTML=`<div class="q-expr"><span style="font-size:26px;font-weight:700">${aw}</span><span class="op-text">-</span>${fH(an,den)}<span class="op-text">=?</span></div>`;
+    if(useStory){const u=UNITS[rand(0,4)];storyText=pickStory(STORY_TEMPLATES.subNatural)(aw,an,den,u);}
   }
-  else if (type === 'sub_pp') {
-    // 진분수-진분수
-    do { an = rand(1, den-1); bn = rand(1, den-1); } while (an <= bn);
-    ansW = 0; ansN = an - bn; ansD = den;
-    qType = '(진분수)-(진분수)';
-    qStr = `${an}/${den} - ${bn}/${den}`;
-  }
-  else if (type === 'sub_mm_can') {
-    // 분수 부분끼리 바로 뺄 수 있는 대분수 뺄셈
-    aw = rand(Math.max(2, wMin + 1), Math.max(3, Math.min(wMax, 7)));
-    bw = rand(1, aw - 1);
-    an = rand(1, den-1);
-    bn = sel5Diff === 'easy' ? rand(1, an) : rand(1, den-1);
-    if (an < bn) [an, bn] = [bn, an];
-    ansW = aw - bw; ansN = an - bn; ansD = den;
-    qType = '분수 부분끼리 뺄 수 있는 (대분수)-(대분수)';
-    qStr = `${aw}과${an}/${den} - ${bw}과${bn}/${den}`;
-  }
-  else if (type === 'sub_nm') {
-    // 자연수-분수: 자연수에서 1만큼을 분수로 바꾸는 감각을 확인
-    aw = rand(Math.max(2, wMin + 1), Math.max(3, Math.min(wMax, 8)));
-    an = sel5Diff === 'easy' ? rand(1, Math.max(1, Math.floor((den-1)/2))) : rand(1, den-1);
-    ansW = aw - 1; ansN = den - an; ansD = den;
-    qType = '(자연수)-(분수)';
-    qStr = `${aw} - ${an}/${den}`;
-  }
-  else { // sub_mm_cant
-    // 분수 부분끼리 뺄 수 없어 받아내림이 필요한 대분수 뺄셈
-    aw = rand(Math.max(2, wMin + 1), Math.max(3, Math.min(wMax, 8)));
-    bw = rand(1, aw - 1);
-    an = rand(1, den-2);
-    bn = sel5Diff === 'easy' ? an + 1 : rand(an + 1, den - 1);
-    ansW = (aw - 1) - bw;
-    ansN = den + an - bn; ansD = den;
-    qType = '분수 부분끼리 뺄 수 없는 (대분수)-(대분수)';
-    qStr = `${aw}과${an}/${den} - ${bw}과${bn}/${den}`;
+  else { // sub_mm_cant: 분수 부분끼리 뺄 수 없음
+    aw=rand(2,6); an=rand(1,den-2);
+    bw=rand(1,aw-1); bn=rand(an+1,den-1);
+    if(bn<=an) bn=an+1;
+    if(bn>=den) bn=den-1;
+    const newN=den+an-bn;
+    ansW=aw-bw-1; ansN=newN; ansD=den;
+    if(ansW<0){aw=bw+1;ansW=0;}
+    qType='분수 부분끼리 뺄 수 없는 (대분수)-(대분수)';
+    displayHTML=makeExprHTML(aw,an,den,'-',bw,bn,den);
+    if(useStory){const u=UNITS[rand(0,3)];storyText=pickStory(STORY_TEMPLATES.subMixed)(aw,an,den,bw,bn,den,u);}
   }
 
-  return { type, qStr, qType, ansW, ansN, ansD, den, originalStr: qStr, diff: sel5Diff };
+  return {type,qType,displayHTML,storyText,ansW,ansN,ansD,den,diff};
 }
 
-function prettyExprText(expr) {
-  return expr.replace(/과/g, '와 ').replace(/ \+ /g, ' 더하기 ').replace(/ - /g, ' 빼기 ');
+function makeExprHTML(aw,an,da,op,bw,bn,db) {
+  const left = (aw===0) ? fH(an,da) : mH(aw,an,da);
+  const right = (bw===0) ? fH(bn,db) : mH(bw,bn,db);
+  return `<div class="q-expr">${left}<span class="op-text">${op}</span>${right}<span class="op-text">=?</span></div>`;
 }
 
-function maybeAddStory(q) {
-  if (sel5Diff !== 'hard' || Math.random() > 0.28) return q;
-  const [left, right] = q.qStr.split(q.qStr.includes(' + ') ? ' + ' : ' - ');
-  const leftText = prettyExprText(left);
-  const rightText = prettyExprText(right);
-  if (q.qStr.includes(' + ')) {
-    q.story = `민지는 리본을 ${leftText} m 사용하고, 지호는 ${rightText} m 사용했습니다. 두 사람이 사용한 리본은 모두 몇 m인가요?`;
-  } else {
-    q.story = `물통에 물이 ${leftText} L 있었습니다. 그중 ${rightText} L를 사용했습니다. 남은 물은 몇 L인가요?`;
-  }
-  return q;
-}
-
-function escapeHTML(s) {
-  return String(s).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
-}
-
-// 문제 파싱해서 HTML로 표시
-function renderFrac(num, den) {
-  return `<span class="frac"><span class="fn">${num}</span><span class="fd">${den}</span></span>`;
-}
-
-function renderMixed(whole, num, den) {
-  if (whole === 0) return renderFrac(num, den);
-  if (num === 0) return `<span style="font-size:26px;font-weight:700">${whole}</span>`;
-  return `<span class="mixed-frac"><span class="whole">${whole}</span>${renderFrac(num, den)}</span>`;
-}
-
-function renderQ5Display(q) {
-  if (q.story) {
-    return `<div class="story-q">${escapeHTML(q.story)}</div>`;
-  }
-  // qStr 형식: "3/5 + 4/5", "2과3/5 + 1과1/5", "3 - 2/5" 등
-  // 파싱해서 예쁜 분수 HTML로 변환
-  const parts = q.qStr.split(' ');
-  let html = '<div class="q-text" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px;">';
-
-  function parsePart(s) {
-    if (s.includes('과')) {
-      const [w, f] = s.split('과');
-      const [n, d] = f.split('/');
-      return renderMixed(parseInt(w), parseInt(n), parseInt(d));
-    } else if (s.includes('/')) {
-      const [n, d] = s.split('/');
-      return renderFrac(parseInt(n), parseInt(d));
-    } else {
-      return `<span style="font-size:26px;font-weight:700">${s}</span>`;
-    }
-  }
-
-  for (let i = 0; i < parts.length; i++) {
-    const p = parts[i];
-    if (p === '+' || p === '-') {
-      html += `<span class="op-text">${p}</span>`;
-    } else {
-      html += parsePart(p);
-    }
-  }
-  html += '<span class="op-text"> = ?</span></div>';
-  return html;
-}
-
-// 답 입력 UI 생성
-function buildAns5UI(q) {
-  const area = document.getElementById('ans5-area');
-  const needsWhole = q.ansW > 0 || q.type === 'add_mm' || q.type === 'sub_mm_can' || q.type === 'sub_mm_cant' || q.type === 'sub_nm' || q.type === 'add_np';
-
-  // 답이 자연수인지 판단
-  const isPureInt = (q.ansN === 0);
-
-  let html = '<div class="ans-frac-wrap" id="ans5-inner">';
-
-  if (isPureInt) {
-    html += `<div class="ans-whole">
-      <input type="number" id="a5-whole" placeholder="답" inputmode="numeric" />
-      <div class="ans-label">정수</div>
-    </div>`;
-  } else {
-    // 대분수 or 진분수
-    const showWhole = needsWhole;
-    if (showWhole) {
-      html += `<div class="ans-whole">
-        <input type="number" id="a5-whole" placeholder="0" inputmode="numeric" />
-        <div class="ans-label">자연수</div>
-      </div>
-      <span style="font-size:24px;font-weight:700;margin:0 2px"></span>`;
-    }
-    html += `<div class="ans-frac-box">
-      <input type="number" id="a5-num" placeholder="분자" inputmode="numeric" />
-      <div class="ans-frac-line"></div>
-      <input type="number" id="a5-den" placeholder="분모" inputmode="numeric" />
-    </div>`;
-  }
-
-  html += `<button class="btn btn-green btn-sm" id="btn5-submit" onclick="submitAns5()" style="align-self:center">확인</button>`;
-  html += '</div>';
-  area.innerHTML = html;
-
-  // 첫 입력창 포커스
-  setTimeout(() => {
-    const f = document.getElementById('a5-whole') || document.getElementById('a5-num');
-    if (f) f.focus();
-  }, 100);
+function makeQ5(lessonId, diff) {
+  return diff==='hard' ? makeQ5_hard(lessonId) : makeQ5_normal(lessonId);
 }
 
 function genQs5(isRetry, count) {
-  const qs = [];
-  if (isRetry) {
-    const pool = [...(db[curStudent.id].wrongPool5||[])].sort(()=>Math.random()-.5);
-    for (let i=0;i<Math.min(count,pool.length);i++) {
-      const w = pool[i];
-      qs.push(maybeAddStory(buildQ5(w.type, pickDenominator(w.type))));
+  const qs=[];
+  if(isRetry) {
+    const pool=[...(db[curStudent.id].wrongPool5||[])].sort(()=>Math.random()-.5);
+    for(let i=0;i<Math.min(count,pool.length);i++) {
+      const w=pool[i];
+      qs.push(buildQ5(w.type, rand(2,10), sel5Diff, false));
     }
-    while (qs.length < count) qs.push(makeQ5(sel5Lesson));
+    while(qs.length<count) qs.push(makeQ5(sel5Lesson, sel5Diff));
   } else {
-    for (let i = 0; i < count; i++) qs.push(makeQ5(sel5Lesson));
+    for(let i=0;i<count;i++) qs.push(makeQ5(sel5Lesson, sel5Diff));
   }
   return qs;
 }
 
-// ===================== 3단원 퀴즈 실행 =====================
-function startQuiz3(isRetry) {
-  const count = parseInt(document.getElementById('sel-count3').value);
-  cur3Qs = genQs3(isRetry, count);
-  cur3Idx = 0; cur3Correct = 0; cur3Wrong = 0; cur3Answered = false; cur3WrongLog = [];
-  document.getElementById('q3-name-label').textContent = `${curStudent.className} ${curStudent.name}`;
-  showPage('pg-quiz3');
-  renderQ3();
-}
+// ==================== 답 입력 UI ====================
+function buildAns5UI(q) {
+  const area=document.getElementById('ans5-area');
+  const isPureInt=(q.ansN===0);
+  // 자연수 칸이 필요한지 판단
+  const needsWhole = q.ansW>0 || ['add_mm','sub_mm_can','sub_mm_cant','sub_nm','add_np'].includes(q.type);
 
-function renderQ3() {
-  const q = cur3Qs[cur3Idx];
-  const total = cur3Qs.length;
-  document.getElementById('q3-progress').textContent = `${cur3Idx+1} / ${total}`;
-  document.getElementById('q3-prog-fill').style.width = Math.round(cur3Idx/total*100) + '%';
-  document.getElementById('q3-text').textContent = q.q;
-  const tl = {mul:'(두 자리) × (두 자리)',mul3:'(세 자리) × (두 자리)',div:'나눗셈 (세 자리 ÷ 두 자리)',div3:'(세 자리) ÷ (두 자리)'}[q.type];
-  document.getElementById('q3-type-label').textContent = tl;
-  const isDiv = q.type==='div'||q.type==='div3';
-  const rem = document.getElementById('ans3-rem');
-  rem.style.display = isDiv ? 'block' : 'none';
-  document.getElementById('q3-hint').textContent = isDiv ? '몫과 나머지를 각각 입력하세요' : '';
-  document.getElementById('ans3-main').placeholder = isDiv ? '몫' : '답';
-  document.getElementById('ans3-main').value = '';
-  rem.value = '';
-  document.getElementById('ans3-main').disabled = false;
-  rem.disabled = false;
-  document.getElementById('btn3-submit').disabled = false;
-  document.getElementById('q3-feedback').style.display = 'none';
-  document.getElementById('btn3-next').style.display = 'none';
-  document.getElementById('ans3-main').focus();
-  cur3Answered = false;
-}
-
-function submitAns3() {
-  if (cur3Answered) return;
-  const mv = document.getElementById('ans3-main').value.trim();
-  if (mv === '') return;
-  const q = cur3Qs[cur3Idx];
-  const userMain = parseInt(mv, 10);
-  const isDiv = q.type==='div'||q.type==='div3';
-  const userRem = isDiv ? parseInt(document.getElementById('ans3-rem').value.trim()||'0',10) : 0;
-  const allOk = userMain===q.answer && (!isDiv || userRem===q.remainder);
-  cur3Answered = true;
-  document.getElementById('ans3-main').disabled = true;
-  document.getElementById('ans3-rem').disabled = true;
-  document.getElementById('btn3-submit').disabled = true;
-  if (allOk) cur3Correct++;
-  else {
-    cur3Wrong++;
-    cur3WrongLog.push({q, userMain, userRem});
-    const wp = db[curStudent.id].wrongPool3 || [];
-    if (!wp.find(w=>w.text===q.text)) wp.push({...q, addedAt:Date.now()});
-    if (wp.length>30) wp.splice(0,wp.length-30);
-    db[curStudent.id].wrongPool3 = wp;
-    saveDB();
-  }
-  setTimeout(nextQ3, 300);
-}
-
-function nextQ3() {
-  cur3Idx++;
-  if (cur3Idx >= cur3Qs.length) finishQuiz3();
-  else renderQ3();
-}
-
-// ===================== 5단원 퀴즈 실행 =====================
-function startQuiz5(isRetry) {
-  cur5Qs = genQs5(isRetry, sel5Count);
-  cur5Idx = 0; cur5Correct = 0; cur5Wrong = 0; cur5Answered = false; cur5WrongLog = [];
-  document.getElementById('q5-name-label').textContent = `${curStudent.className} ${curStudent.name}`;
-  showPage('pg-quiz5');
-  renderQ5();
-}
-
-function renderQ5() {
-  const q = cur5Qs[cur5Idx];
-  const total = cur5Qs.length;
-  document.getElementById('q5-progress').textContent = `${cur5Idx+1} / ${total}`;
-  document.getElementById('q5-prog-fill').style.width = Math.round(cur5Idx/total*100) + '%';
-  document.getElementById('q5-type-label').textContent = q.qType;
-  document.getElementById('q5-display').innerHTML = renderQ5Display(q);
-  document.getElementById('q5-hint').textContent = '';
-  document.getElementById('q5-feedback').style.display = 'none';
-  document.getElementById('btn5-next').style.display = 'none';
-  buildAns5UI(q);
-  cur5Answered = false;
-}
-
-function formatFracText(w, n, d) {
-  if (n === 0) return `${w}`;
-  if (w === 0) return `${n}/${d}`;
-  return `${w}과 ${n}/${d}`;
-}
-
-function analyzeError5(q, userW, userN, userD) {
-  const improperUserN = userW === 0 ? userN : userW * userD + userN;
-  const improperAnsN = q.ansW * q.ansD + q.ansN;
-  if (q.ansW > 0 && userW === 0 && userD === q.ansD && userN === improperAnsN) {
-    return '가분수를 대분수로 바꾸지 않았어요';
-  }
-  if (userD !== q.ansD) return '분모를 바꾸거나 분모까지 계산한 실수';
-  if ((q.type === 'sub_nm' || q.type === 'sub_mm_cant') && userW !== q.ansW) return '받아내림 실수';
-  if ((q.type === 'add_pp_gt1' || q.type === 'add_mm') && improperUserN === improperAnsN && userW !== q.ansW) return '가분수→대분수 변환 실수';
-  if (userW !== q.ansW) return '자연수 부분 계산 실수';
-  if (userN !== q.ansN) return '분자 계산 실수';
-  return '계산 오류';
-}
-
-function submitAns5() {
-  if (cur5Answered) return;
-  const q = cur5Qs[cur5Idx];
-  const isPureInt = (q.ansN === 0);
-  const needsWhole = document.getElementById('a5-whole') !== null;
-
-  let userW = 0, userN = 0, userD = q.ansD;
-
-  if (isPureInt) {
-    const v = document.getElementById('a5-whole').value.trim();
-    if (v === '') return;
-    userW = parseInt(v, 10); userN = 0; userD = q.ansD;
+  let html='<div class="ans-wrap" id="ans5-inner">';
+  if(isPureInt) {
+    html+=`<div class="ans-whole-box"><input type="number" id="a5-whole" placeholder="답" inputmode="numeric"/><div class="ans-label">정수</div></div>`;
   } else {
-    if (needsWhole) {
-      const wv = document.getElementById('a5-whole').value.trim();
-      userW = wv === '' ? 0 : parseInt(wv, 10);
+    if(needsWhole) {
+      html+=`<div class="ans-whole-box"><input type="number" id="a5-whole" placeholder="0" inputmode="numeric"/><div class="ans-label">자연수</div></div><span style="font-size:22px;font-weight:700;margin:0 2px;padding-bottom:8px"></span>`;
     }
-    const nv = document.getElementById('a5-num')?.value.trim();
-    const dv = document.getElementById('a5-den')?.value.trim();
-    if (!nv || !dv) return;
-    userN = parseInt(nv, 10); userD = parseInt(dv, 10);
+    html+=`<div class="ans-frac-box"><input type="number" id="a5-num" placeholder="분자" inputmode="numeric"/><div class="ans-frac-line"></div><input type="number" id="a5-den" placeholder="분모" inputmode="numeric"/></div>`;
   }
+  html+=`<button class="btn btn-green btn-sm" id="btn5-submit" onclick="submitAns5()" style="align-self:center;margin-left:4px">확인</button>`;
+  html+='</div>';
+  area.innerHTML=html;
+  setTimeout(()=>{const f=document.getElementById('a5-whole')||document.getElementById('a5-num');if(f)f.focus();},80);
+}
 
-  cur5Answered = true;
-  // 비활성화
-  ['a5-whole','a5-num','a5-den'].forEach(id => { const el = document.getElementById(id); if (el) el.disabled = true; });
-  const sb = document.getElementById('btn5-submit'); if (sb) sb.disabled = true;
+// ==================== 3단원 퀴즈 ====================
+function startQuiz3(isRetry){
+  const count=parseInt(document.getElementById('sel-count3').value);
+  cur3Qs=genQs3(isRetry,count);
+  cur3Idx=0;cur3Correct=0;cur3Wrong=0;cur3Answered=false;cur3WrongLog=[];
+  document.getElementById('q3-name-label').textContent=`${curStudent.className} ${curStudent.name}`;
+  showPage('pg-quiz3');renderQ3();
+}
+function renderQ3(){
+  const q=cur3Qs[cur3Idx],total=cur3Qs.length;
+  document.getElementById('q3-progress').textContent=`${cur3Idx+1} / ${total}`;
+  document.getElementById('q3-prog-fill').style.width=Math.round(cur3Idx/total*100)+'%';
+  document.getElementById('q3-text').textContent=q.q+' = ?';
+  const tl={mul:'(두 자리) × (두 자리)',mul3:'(세 자리) × (두 자리)',div:'나눗셈',div3:'(세 자리) ÷ (두 자리)'}[q.type];
+  document.getElementById('q3-type-label').textContent=tl;
+  const isDiv=q.type==='div'||q.type==='div3';
+  const rem=document.getElementById('ans3-rem');
+  rem.style.display=isDiv?'block':'none';
+  document.getElementById('q3-hint').textContent=isDiv?'몫과 나머지를 각각 입력하세요':'';
+  document.getElementById('ans3-main').placeholder=isDiv?'몫':'답';
+  document.getElementById('ans3-main').value='';rem.value='';
+  document.getElementById('ans3-main').disabled=false;rem.disabled=false;
+  document.getElementById('btn3-submit').disabled=false;
+  document.getElementById('q3-feedback').style.display='none';
+  document.getElementById('btn3-next').style.display='none';
+  document.getElementById('ans3-main').focus();
+  cur3Answered=false;
+}
+function submitAns3(){
+  if(cur3Answered)return;
+  const mv=document.getElementById('ans3-main').value.trim();if(mv==='')return;
+  const q=cur3Qs[cur3Idx],userMain=parseInt(mv,10);
+  const isDiv=q.type==='div'||q.type==='div3';
+  const userRem=isDiv?parseInt(document.getElementById('ans3-rem').value.trim()||'0',10):0;
+  const allOk=userMain===q.answer&&(!isDiv||userRem===q.remainder);
+  cur3Answered=true;
+  document.getElementById('ans3-main').disabled=true;document.getElementById('ans3-rem').disabled=true;document.getElementById('btn3-submit').disabled=true;
+  if(allOk)cur3Correct++;
+  else{
+    cur3Wrong++;cur3WrongLog.push({q,userMain,userRem});
+    const wp=db[curStudent.id].wrongPool3||[];
+    if(!wp.find(w=>w.text===q.text))wp.push({...q,addedAt:Date.now()});
+    if(wp.length>30)wp.splice(0,wp.length-30);
+    db[curStudent.id].wrongPool3=wp;saveDB();
+  }
+  setTimeout(nextQ3,300);
+}
+function nextQ3(){cur3Idx++;if(cur3Idx>=cur3Qs.length)finishQuiz3();else renderQ3();}
 
-  // 정답 체크: 분모 같고, 자연수 같고, 분자 같아야
-  const correct = userW === q.ansW && userN === q.ansN && userD === q.ansD;
-
-  const fb = document.getElementById('q5-feedback');
-  const correctStr = formatFracText(q.ansW, q.ansN, q.ansD);
-  const userStr = formatFracText(userW, userN, userD);
-
-  if (correct) {
-    cur5Correct++;
-    fb.className = 'feedback ok';
-    fb.textContent = `✅ 정답이에요! (${correctStr})`;
+// ==================== 5단원 퀴즈 ====================
+function startQuiz5(isRetry){
+  cur5Qs=genQs5(isRetry,sel5Count);
+  cur5Idx=0;cur5Correct=0;cur5Wrong=0;cur5Answered=false;cur5WrongLog=[];
+  document.getElementById('q5-name-label').textContent=`${curStudent.className} ${curStudent.name}`;
+  showPage('pg-quiz5');renderQ5();
+}
+function renderQ5(){
+  const q=cur5Qs[cur5Idx],total=cur5Qs.length;
+  document.getElementById('q5-progress').textContent=`${cur5Idx+1} / ${total}`;
+  document.getElementById('q5-prog-fill').style.width=Math.round(cur5Idx/total*100)+'%';
+  document.getElementById('q5-type-label').textContent=q.qType+(q.storyText?' 📖':'');
+  // 문장제이면 스토리+식, 아니면 식만
+  const disp=document.getElementById('q5-display');
+  if(q.storyText){
+    // 문장에서 분수 표현 추출해 HTML로 예쁘게
+    const storyHTML=q.storyText.replace(/(\d+)과(\d+)\/(\d+)/g,(_,w,n,d)=>mH(parseInt(w),parseInt(n),parseInt(d)))
+      .replace(/(\d+)\/(\d+)/g,(_,n,d)=>fH(parseInt(n),parseInt(d)));
+    disp.innerHTML=`<div class="q-story">${storyHTML}</div><div class="q-ask">➡ 답은 몇인가요?</div>`;
   } else {
-    cur5Wrong++;
-    fb.className = 'feedback ng';
-    const errType = analyzeError5(q, userW, userN, userD);
-    fb.textContent = `❌ 틀렸어요. 내 답: ${userStr} / 정답: ${correctStr}
-${errType}`;
-    cur5WrongLog.push({ q, userW, userN, userD, errType });
-    const wp = db[curStudent.id].wrongPool5 || [];
-    if (!wp.find(w=>w.qStr===q.qStr)) wp.push({...q, addedAt:Date.now()});
-    if (wp.length>30) wp.splice(0,wp.length-30);
-    db[curStudent.id].wrongPool5 = wp;
-    saveDB();
+    disp.innerHTML=q.displayHTML;
   }
-  fb.style.display = 'block';
-  document.getElementById('btn5-next').style.display = 'block';
+  document.getElementById('q5-feedback').style.display='none';
+  document.getElementById('btn5-next').style.display='none';
+  buildAns5UI(q);
+  cur5Answered=false;
 }
-
-function nextQ5() {
-  cur5Idx++;
-  if (cur5Idx >= cur5Qs.length) finishQuiz5();
-  else renderQ5();
+function submitAns5(){
+  if(cur5Answered)return;
+  const q=cur5Qs[cur5Idx];
+  const isPureInt=(q.ansN===0);
+  const needsWhole=document.getElementById('a5-whole')!==null;
+  let userW=0,userN=0,userD=q.ansD;
+  if(isPureInt){
+    const v=document.getElementById('a5-whole').value.trim();if(v==='')return;
+    userW=parseInt(v,10);userN=0;
+  } else {
+    if(needsWhole){const wv=document.getElementById('a5-whole').value.trim();userW=wv===''?0:parseInt(wv,10);}
+    const nv=document.getElementById('a5-num')?.value.trim(),dv=document.getElementById('a5-den')?.value.trim();
+    if(!nv||!dv)return;
+    userN=parseInt(nv,10);userD=parseInt(dv,10);
+  }
+  cur5Answered=true;
+  ['a5-whole','a5-num','a5-den'].forEach(id=>{const el=document.getElementById(id);if(el)el.disabled=true;});
+  const sb=document.getElementById('btn5-submit');if(sb)sb.disabled=true;
+  const correct=userW===q.ansW&&userN===q.ansN&&userD===q.ansD;
+  const fb=document.getElementById('q5-feedback');
+  const correctStr=formatFrac(q.ansW,q.ansN,q.ansD);
+  const userStr=formatFrac(userW,userN,userD);
+  if(correct){cur5Correct++;fb.className='feedback ok';fb.textContent=`✅ 정답이에요! (${correctStr})`;}
+  else{
+    cur5Wrong++;fb.className='feedback ng';fb.textContent=`❌ 틀렸어요. 내 답: ${userStr} / 정답: ${correctStr}`;
+    cur5WrongLog.push({q,userW,userN,userD});
+    const wp=db[curStudent.id].wrongPool5||[];
+    if(!wp.find(w=>w.qType===q.qType&&w.den===q.den))wp.push({...q,addedAt:Date.now()});
+    if(wp.length>30)wp.splice(0,wp.length-30);
+    db[curStudent.id].wrongPool5=wp;saveDB();
+  }
+  fb.style.display='block';document.getElementById('btn5-next').style.display='block';
 }
+function nextQ5(){cur5Idx++;if(cur5Idx>=cur5Qs.length)finishQuiz5();else renderQ5();}
 
-// ===================== 결과 =====================
-async function finishQuiz3() {
-  const total = cur3Qs.length;
-  const pct = Math.round(cur3Correct/total*100);
-  const session = { date:new Date().toLocaleDateString('ko-KR'), time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'}), total, correct:cur3Correct, wrong:cur3Wrong, pct, unit:'3' };
-  (db[curStudent.id].sessions3 = db[curStudent.id].sessions3||[]).push(session);
-  saveDB();
-  renderResult('3', total, cur3Correct, cur3Wrong, pct, cur3WrongLog, session);
+// ==================== 결과 ====================
+async function finishQuiz3(){
+  const total=cur3Qs.length,pct=Math.round(cur3Correct/total*100);
+  const session={date:new Date().toLocaleDateString('ko-KR'),time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'}),total,correct:cur3Correct,wrong:cur3Wrong,pct,unit:'3'};
+  (db[curStudent.id].sessions3=db[curStudent.id].sessions3||[]).push(session);saveDB();
+  renderResult('3',total,cur3Correct,cur3Wrong,pct,cur3WrongLog,session);
   showPage('pg-result3');
-  await saveToSheets(session, cur3WrongLog, 'res3-save-status');
+  await saveToSheets(session,cur3WrongLog,'res3-save-status');
 }
-
-async function finishQuiz5() {
-  const total = cur5Qs.length;
-  const pct = Math.round(cur5Correct/total*100);
-  const diffLabel = DIFF_LABELS[sel5Diff];
-  const session = { date:new Date().toLocaleDateString('ko-KR'), time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'}), total, correct:cur5Correct, wrong:cur5Wrong, pct, unit:'5', lesson:sel5Lesson, diff:diffLabel };
-  (db[curStudent.id].sessions5 = db[curStudent.id].sessions5||[]).push(session);
-  saveDB();
-  renderResult('5', total, cur5Correct, cur5Wrong, pct, cur5WrongLog, session);
+async function finishQuiz5(){
+  const total=cur5Qs.length,pct=Math.round(cur5Correct/total*100);
+  const diffLabel={normal:'보통',hard:'어려움'}[sel5Diff];
+  const session={date:new Date().toLocaleDateString('ko-KR'),time:new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'}),total,correct:cur5Correct,wrong:cur5Wrong,pct,unit:'5',lesson:sel5Lesson,diff:diffLabel};
+  (db[curStudent.id].sessions5=db[curStudent.id].sessions5||[]).push(session);saveDB();
+  renderResult('5',total,cur5Correct,cur5Wrong,pct,cur5WrongLog,session);
   showPage('pg-result5');
-  await saveToSheets(session, cur5WrongLog, 'res5-save-status');
+  await saveToSheets(session,cur5WrongLog,'res5-save-status');
 }
 
-function renderResult(unit, total, correct, wrong, pct, wrongLog, session) {
-  const u = unit;
-  document.getElementById(`res${u}-student-name`).textContent = `${curStudent.className} ${curStudent.name} 학생 결과`;
-  const sb = document.getElementById(`res${u}-score-big`);
-  sb.textContent = pct + '%';
-  sb.style.color = pct>=80?'#137333':pct>=60?'#1a73e8':'#c5221f';
-  document.getElementById(`res${u}-score-sub`).textContent = `${correct}문제 정답 / ${total}문제`;
-  const msg = document.getElementById(`res${u}-msg`);
-  if (pct===100) { msg.textContent='완벽해요! 모두 맞혔어요!'; msg.className='result-msg great'; }
-  else if (pct>=80) { msg.textContent='잘했어요! 조금만 더 연습하면 완벽해요.'; msg.className='result-msg great'; }
-  else if (pct>=60) { msg.textContent='괜찮아요. 틀린 문제를 다시 도전해봐요.'; msg.className='result-msg good'; }
-  else { msg.textContent='다시 한 번 도전해봐요! 연습하면 늘어요.'; msg.className='result-msg try'; }
-  document.getElementById(`res${u}-total`).textContent = total;
-  document.getElementById(`res${u}-correct`).textContent = correct;
-  document.getElementById(`res${u}-wrong`).textContent = wrong;
+function renderResult(unit,total,correct,wrong,pct,wrongLog,session){
+  const u=unit;
+  document.getElementById(`res${u}-student-name`).textContent=`${curStudent.className} ${curStudent.name} 학생 결과`;
+  const sb=document.getElementById(`res${u}-score-big`);
+  sb.textContent=pct+'%';sb.style.color=pct>=80?'#137333':pct>=60?'#1a73e8':'#c5221f';
+  document.getElementById(`res${u}-score-sub`).textContent=`${correct}문제 정답 / ${total}문제`;
+  const msg=document.getElementById(`res${u}-msg`);
+  if(pct===100){msg.textContent='완벽해요! 모두 맞혔어요!';msg.className='result-msg great';}
+  else if(pct>=80){msg.textContent='잘했어요! 조금만 더 연습하면 완벽해요.';msg.className='result-msg great';}
+  else if(pct>=60){msg.textContent='괜찮아요. 틀린 문제를 다시 도전해봐요.';msg.className='result-msg good';}
+  else{msg.textContent='다시 한 번 도전해봐요! 연습하면 늘어요.';msg.className='result-msg try';}
+  document.getElementById(`res${u}-total`).textContent=total;
+  document.getElementById(`res${u}-correct`).textContent=correct;
+  document.getElementById(`res${u}-wrong`).textContent=wrong;
 
-  // 5단원 오답 상세
-  const wa = document.getElementById(`res${u}-wrong-analysis`);
-  if (wrongLog.length > 0 && unit === '5') {
-    let html = `<div class="card"><h3>이번 오답 (${wrongLog.length}개)</h3>`;
-    wrongLog.forEach(w => {
-      const correctStr = formatFracText(w.q.ansW, w.q.ansN, w.q.ansD);
-      const userStr = formatFracText(w.userW, w.userN, w.userD);
-      html += `<div class="wrong-item">
-        <div class="wrong-q">${w.q.qStr.replace(/과(\d+)\/(\d+)/g, ' $1/$2')} = ?</div>
-        <div class="wrong-ans">내 답: ${userStr}</div>
-        <div class="wrong-correct">정답: ${correctStr}</div>
-        <span class="wrong-analysis-tag">${w.errType || w.q.qType}</span>
-      </div>`;
+  const wa=document.getElementById(`res${u}-wrong-analysis`);
+  if(wrongLog.length>0&&unit==='5'){
+    let html=`<div class="card"><h3>이번 오답 (${wrongLog.length}개)</h3>`;
+    wrongLog.forEach(w=>{
+      const cs=formatFrac(w.q.ansW,w.q.ansN,w.q.ansD),us=formatFrac(w.userW,w.userN,w.userD);
+      html+=`<div class="wrong-item"><div class="wrong-q">${w.q.storyText||w.q.qType}</div><div class="wrong-ans">내 답: ${us}</div><div class="wrong-correct">정답: ${cs}</div><span class="wrong-tag">${w.q.qType}</span></div>`;
     });
-    html += '</div>';
-    wa.innerHTML = html;
-  } else { wa.innerHTML = ''; }
+    html+='</div>';wa.innerHTML=html;
+  } else wa.innerHTML='';
 
-  // 누적 오답
-  const wp = (unit==='5') ? db[curStudent.id].wrongPool5 : db[curStudent.id].wrongPool3;
-  const wpl = document.getElementById(`res${u}-wrong-pool`);
-  if (wp && wp.length > 0) {
-    let html = `<div class="card"><h3>누적 오답 (${wp.length}개)</h3>`;
-    wp.forEach(w => {
-      const qs = unit==='5' ? w.qStr : w.q.replace('= ?','');
-      html += `<div class="wrong-item"><div class="wrong-q">${qs}</div></div>`;
-    });
-    html += `<button class="btn btn-red" style="margin-top:8px" onclick="clearWrong${u}()">오답 목록 초기화</button></div>`;
-    wpl.innerHTML = html;
-  } else { wpl.innerHTML = ''; }
+  const wp=(unit==='5')?db[curStudent.id].wrongPool5:db[curStudent.id].wrongPool3;
+  const wpl=document.getElementById(`res${u}-wrong-pool`);
+  if(wp&&wp.length>0){
+    let html=`<div class="card"><h3>누적 오답 (${wp.length}개)</h3>`;
+    wp.forEach(w=>{html+=`<div class="wrong-item"><div class="wrong-q">${unit==='5'?(w.qType||''):(w.q||'').replace('= ?','')}</div></div>`;});
+    html+=`<button class="btn btn-red" style="margin-top:8px" onclick="clearWrong${u}()">오답 목록 초기화</button></div>`;
+    wpl.innerHTML=html;
+  } else wpl.innerHTML='';
 }
 
-function clearWrong3() { db[curStudent.id].wrongPool3=[]; saveDB(); document.getElementById('res3-wrong-pool').innerHTML=''; }
-function clearWrong5() { db[curStudent.id].wrongPool5=[]; saveDB(); document.getElementById('res5-wrong-pool').innerHTML=''; }
+function clearWrong3(){db[curStudent.id].wrongPool3=[];saveDB();document.getElementById('res3-wrong-pool').innerHTML='';}
+function clearWrong5(){db[curStudent.id].wrongPool5=[];saveDB();document.getElementById('res5-wrong-pool').innerHTML='';}
 
-async function saveToSheets(session, wrongLog, statusId) {
-  const saveEl = document.getElementById(statusId);
-  if (!GAS_URL) { saveEl.style.display='none'; return; }
-  saveEl.style.display='block'; saveEl.textContent='결과 저장 중...'; saveEl.className='notice';
-  try {
-    const wrongSummary = wrongLog.map(w => w.q ? `${w.q.qStr||w.q.q||''}${w.errType ? '('+w.errType+')' : ''}` : '').join(' / ');
-    const params = new URLSearchParams({
-      action:'saveResult', className:curStudent.className, name:curStudent.name,
-      date:session.date, time:session.time, total:session.total,
-      correct:session.correct, wrong:session.wrong, pct:session.pct,
-      unit:session.unit||'3', lesson:session.lesson||'', difficulty:session.diff||'', wrongList:wrongSummary
-    });
-    await fetch(GAS_URL+'?'+params.toString(), {method:'GET',mode:'no-cors'});
-    saveEl.textContent='Google Sheets에 저장되었습니다.';
-    saveEl.style.background='#e6f4ea'; saveEl.style.color='#137333';
-  } catch(e) {
-    saveEl.textContent='저장 실패 — 인터넷 연결을 확인하세요.';
-    saveEl.className='notice warn';
-  }
+async function saveToSheets(session,wrongLog,statusId){
+  const saveEl=document.getElementById(statusId);
+  if(!GAS_URL){saveEl.style.display='none';return;}
+  saveEl.style.display='block';saveEl.textContent='결과 저장 중...';saveEl.className='notice';
+  try{
+    const wrongSummary=wrongLog.map(w=>w.q?(w.q.qType||w.q.q||''):'').join(' / ');
+    const params=new URLSearchParams({action:'saveResult',className:curStudent.className,name:curStudent.name,date:session.date,time:session.time,total:session.total,correct:session.correct,wrong:session.wrong,pct:session.pct,unit:session.unit||'3',wrongList:wrongSummary});
+    await fetch(GAS_URL+'?'+params.toString(),{method:'GET',mode:'no-cors'});
+    saveEl.textContent='Google Sheets에 저장되었습니다.';saveEl.style.background='#e6f4ea';saveEl.style.color='#137333';
+  }catch(e){saveEl.textContent='저장 실패 — 인터넷 연결을 확인하세요.';saveEl.className='notice warn';}
 }
 
-// ===================== 교사 대시보드 =====================
-function setTeacherClassFilter(cls) { teacherClassFilter=cls; renderTeacher(); renderWrongAnalysis(); }
-function getTeacherStudents() { return teacherClassFilter==='all' ? STUDENTS : STUDENTS.filter(s=>s.className===teacherClassFilter); }
-
-function renderClassFilterButtons(cid) {
-  const box=document.getElementById(cid); if (!box) return;
+// ==================== 교사 대시보드 ====================
+function setTeacherClassFilter(cls){teacherClassFilter=cls;renderTeacher();renderWrongAnalysis();}
+function getTeacherStudents(){return teacherClassFilter==='all'?STUDENTS:STUDENTS.filter(s=>s.className===teacherClassFilter);}
+function renderClassFilterButtons(cid){
+  const box=document.getElementById(cid);if(!box)return;
   const labels=['all',...Object.keys(CLASSES)];
   box.innerHTML=labels.map(c=>`<button class="filter-btn ${teacherClassFilter===c?'active':''}" onclick="setTeacherClassFilter('${c}')">${c==='all'?'전체':c}</button>`).join('');
 }
-
-function renderTeacher() {
+function renderTeacher(){
   document.getElementById('teacher-notice').style.display='none';
-  renderClassFilterButtons('teacher-class-filter');
-  renderClassFilterButtons('detail-class-filter');
+  renderClassFilterButtons('teacher-class-filter');renderClassFilterButtons('detail-class-filter');
   const fs=getTeacherStudents();
-  const allS=[...fs.flatMap(s=>(db[s.id].sessions3||[]).map(x=>({...x,unit:'3'}))), ...fs.flatMap(s=>(db[s.id].sessions5||[]).map(x=>({...x,unit:'5'})))];
-  const total=allS.length, avg=total>0?Math.round(allS.reduce((a,b)=>a+b.pct,0)/total):0;
+  const allS=[...fs.flatMap(s=>(db[s.id].sessions3||[]).map(x=>({...x,unit:'3'}))),...fs.flatMap(s=>(db[s.id].sessions5||[]).map(x=>({...x,unit:'5'})))];
+  const total=allS.length,avg=total>0?Math.round(allS.reduce((a,b)=>a+b.pct,0)/total):0;
   const totalWrong=fs.reduce((a,s)=>a+(db[s.id].wrongPool3||[]).length+(db[s.id].wrongPool5||[]).length,0);
-  const active=fs.filter(s=>(db[s.id].sessions3||[]).length>0||(db[s.id].sessions5||[]).length>0).length;
+  const active=fs.filter(s=>(db[s.id].sessions3||[]).length+(db[s.id].sessions5||[]).length>0).length;
   const pre=teacherClassFilter==='all'?'전체':teacherClassFilter;
   document.getElementById('teacher-metrics').innerHTML=`
     <div class="metric"><div class="metric-label">${pre} 응시 학생</div><div class="metric-val" style="color:#1a73e8">${active}명</div></div>
     <div class="metric"><div class="metric-label">${pre} 총 풀이</div><div class="metric-val">${total}</div></div>
     <div class="metric"><div class="metric-label">${pre} 평균 정답률</div><div class="metric-val" style="color:${avg>=80?'#137333':avg>=60?'#1a73e8':'#c5221f'}">${avg}%</div></div>
     <div class="metric"><div class="metric-label">${pre} 누적 오답</div><div class="metric-val" style="color:#c5221f">${totalWrong}</div></div>`;
-  if (document.getElementById('teacher-list-title')) document.getElementById('teacher-list-title').textContent=`${pre} 학생별 현황`;
-  const tbody=document.getElementById('teacher-tbody'); tbody.innerHTML='';
+  if(document.getElementById('teacher-list-title'))document.getElementById('teacher-list-title').textContent=`${pre} 학생별 현황`;
+  const tbody=document.getElementById('teacher-tbody');tbody.innerHTML='';
   fs.forEach(s=>{
-    const r=db[s.id];
-    const s3=(r.sessions3||[]),s5=(r.sessions5||[]);
+    const r=db[s.id],s3=r.sessions3||[],s5=r.sessions5||[];
     const n=s3.length+s5.length;
     const allPct=[...s3,...s5].map(x=>x.pct);
     const avg2=allPct.length>0?Math.round(allPct.reduce((a,b)=>a+b,0)/allPct.length):null;
@@ -1225,60 +986,52 @@ function renderTeacher() {
     tr.innerHTML=`<td>${s.className}</td><td>${s.name}</td><td>${n}</td><td>${avg2!==null?`<span class="badge ${avg2>=80?'badge-green':avg2>=60?'badge-blue':'badge-red'}">${avg2}%</span>`:'-'}</td><td>${last}</td><td>${wc>0?`<span class="badge badge-red">${wc}</span>`:0}</td>`;
     tbody.appendChild(tr);
   });
-  const dsel=document.getElementById('detail-sel'); dsel.innerHTML='';
-  fs.forEach(s=>{ const o=document.createElement('option'); o.value=s.id; o.textContent=`${s.className} ${s.name}`; dsel.appendChild(o); });
+  const dsel=document.getElementById('detail-sel');dsel.innerHTML='';
+  fs.forEach(s=>{const o=document.createElement('option');o.value=s.id;o.textContent=`${s.className} ${s.name}`;dsel.appendChild(o);});
   renderDetail();
 }
-
-function renderDetail() {
+function renderDetail(){
   const sid=document.getElementById('detail-sel').value;
   const dc=document.getElementById('detail-content');
-  if (!sid) { dc.innerHTML='<p style="color:#888;font-size:14px;margin-top:8px">학생을 선택하세요.</p>'; return; }
-  const r=db[sid], s=STUDENTS.find(x=>x.id===sid);
-  const all=[...(r.sessions3||[]).map(x=>({...x,unit:'3'})), ...(r.sessions5||[]).map(x=>({...x,unit:'5'}))];
-  if (!all.length) { dc.innerHTML='<p style="color:#888;font-size:14px;margin-top:8px">아직 응시 기록이 없습니다.</p>'; return; }
+  if(!sid){dc.innerHTML='<p style="color:#888;font-size:14px;margin-top:8px">학생을 선택하세요.</p>';return;}
+  const r=db[sid],s=STUDENTS.find(x=>x.id===sid);
+  const all=[...(r.sessions3||[]).map(x=>({...x,unit:'3'})),...(r.sessions5||[]).map(x=>({...x,unit:'5'}))];
+  if(!all.length){dc.innerHTML='<p style="color:#888;font-size:14px;margin-top:8px">아직 응시 기록이 없습니다.</p>';return;}
   let html=`<div class="card"><h3>${s.className} ${s.name} 학생 기록</h3><div style="overflow-x:auto"><table><thead><tr><th>날짜</th><th>단원</th><th>총</th><th>정답</th><th>오답</th><th>정답률</th></tr></thead><tbody>`;
   all.slice().reverse().forEach(se=>{
-    const unitLabel = se.unit==='5' ? `5단원 ${se.lesson||''}차시 ${se.diff||''}` : '3단원';
-    html+=`<tr><td>${se.date}</td><td style="font-size:11px">${unitLabel}</td><td>${se.total}</td><td>${se.correct}</td><td>${se.wrong}</td><td><span class="badge ${se.pct>=80?'badge-green':se.pct>=60?'badge-blue':'badge-red'}">${se.pct}%</span></td></tr>`;
+    const ul=se.unit==='5'?`5단원 ${se.lesson||''}차시 ${se.diff||''}`:'3단원';
+    html+=`<tr><td>${se.date}</td><td style="font-size:11px">${ul}</td><td>${se.total}</td><td>${se.correct}</td><td>${se.wrong}</td><td><span class="badge ${se.pct>=80?'badge-green':se.pct>=60?'badge-blue':'badge-red'}">${se.pct}%</span></td></tr>`;
   });
-  html+=`</tbody></table></div></div>`;
-  dc.innerHTML=html;
+  html+=`</tbody></table></div></div>`;dc.innerHTML=html;
 }
-
-function renderWrongAnalysis() {
+function renderWrongAnalysis(){
   const wa=document.getElementById('wrong-analysis');
   const all=[];
-  getTeacherStudents().forEach(s=>{ (db[s.id].wrongPool5||[]).forEach(w=>all.push({student:`${s.className} ${s.name}`, ...w})); });
-  if (!all.length) { wa.innerHTML='<p style="color:#888;font-size:14px">현재 5단원 오답 없음.</p>'; return; }
-  let html=`<div class="card"><h3>5단원 오답 상세 (${all.length}개)</h3><div style="overflow-x:auto"><table><thead><tr><th>학생</th><th>문제</th><th>유형</th></tr></thead><tbody>`;
+  getTeacherStudents().forEach(s=>{(db[s.id].wrongPool5||[]).forEach(w=>all.push({student:`${s.className} ${s.name}`,...w}));});
+  if(!all.length){wa.innerHTML='<p style="color:#888;font-size:14px">현재 5단원 오답 없음.</p>';return;}
+  let html=`<div class="card"><h3>5단원 오답 상세 (${all.length}개)</h3><div style="overflow-x:auto"><table><thead><tr><th>학생</th><th>유형</th><th>난이도</th></tr></thead><tbody>`;
   all.forEach(w=>{
-    html+=`<tr><td>${w.student}</td><td style="font-size:12px">${w.qStr||''}</td><td><span class="badge badge-purple" style="font-size:10px">${w.qType||''}</span></td></tr>`;
+    html+=`<tr><td>${w.student}</td><td><span class="badge badge-purple" style="font-size:10px">${w.qType||''}</span></td><td><span class="badge ${w.diff==='hard'?'badge-red':'badge-blue'}" style="font-size:10px">${w.diff==='hard'?'어려움':'보통'}</span></td></tr>`;
   });
-  html+=`</tbody></table></div></div>`;
-  wa.innerHTML=html;
+  html+=`</tbody></table></div></div>`;wa.innerHTML=html;
 }
-
-function switchTab(id) {
+function switchTab(id){
   ['tab-overview','tab-detail','tab-wrong'].forEach(t=>document.getElementById(t).style.display='none');
   document.getElementById(id).style.display='block';
   document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',['tab-overview','tab-detail','tab-wrong'][i]===id));
-  if (id==='tab-detail') renderDetail();
-  if (id==='tab-wrong') renderWrongAnalysis();
+  if(id==='tab-detail')renderDetail();if(id==='tab-wrong')renderWrongAnalysis();
 }
 
 // Enter 키
-document.addEventListener('keydown', e => {
-  if (e.key !== 'Enter') return;
-  const pg = document.querySelector('.page.active');
-  if (!pg) return;
-  if (pg.id === 'pg-quiz3' && !cur3Answered) submitAns3();
-  else if (pg.id === 'pg-quiz5' && !cur5Answered) submitAns5();
-  else if (pg.id === 'pg-quiz5' && cur5Answered) nextQ5();
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Enter')return;
+  const pg=document.querySelector('.page.active');if(!pg)return;
+  if(pg.id==='pg-quiz3'&&!cur3Answered)submitAns3();
+  else if(pg.id==='pg-quiz5'&&!cur5Answered)submitAns5();
+  else if(pg.id==='pg-quiz5'&&cur5Answered)nextQ5();
 });
 
-loadDB();
-showPage('pg-class');
+loadDB();showPage('pg-class');
 </script>
 </body>
 </html>
